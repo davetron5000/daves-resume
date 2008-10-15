@@ -1,0 +1,5 @@
+--- !ruby/object:Education 
+degree: Bachelor of Science
+major: Computer Science
+name: Virginia Tech
+year_graduated: 1996

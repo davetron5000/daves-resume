@@ -1,0 +1,6 @@
+--- !ruby/object:Education 
+degree: Master of Science
+major: Computer Science
+name: Arizona State University
+other_info: "Thesis: 'A Methodology for Software Verification and Validation Process Improvement'"
+year_graduated: 1997
