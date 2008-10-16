@@ -1,5 +1,5 @@
 --- !ruby/object:Job 
-date_range: &id002 !ruby/object:DateRange 
+date_range: &id007 !ruby/object:DateRange 
   end_date: 2002-02-01
   start_date: 1998-02-01
 location: San Francisco, CA
@@ -8,7 +8,7 @@ positions:
 - !ruby/object:Position 
   title: Software Engineering Director
   description: Manage department of software engineers and HTML programmers.  Participate in recruiting, training, career development, and employee performance reviews.  Provide technical leadership and development processes.  Provide project estimation and allocate staff to projects.  Perform Java design and development when needed.
-  date_range: &id003 !ruby/object:DateRange 
+  date_range: &id008 !ruby/object:DateRange 
     end_date: 2002-02-01
     start_date: 1999-06-01
   achievements: 
@@ -19,7 +19,7 @@ positions:
 - !ruby/object:Position 
   title: Software Engineer
   description: Perform software design and development for web-based systems.  Coordinate developers and HTML programmers for Toyota.com.  Provide work estimates to support business development and project planning.
-  date_range: &id003 !ruby/object:DateRange 
+  date_range: &id009 !ruby/object:DateRange 
     end_date: 1999-06-01
     start_date: 1998-02-01
   achievements: 

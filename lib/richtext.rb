@@ -32,8 +32,10 @@ module Resume
     SUPPLEMENTAL.left_indent = QUARTER_INCH
     SUPPLEMENTAL_TEXT.font_size = 20
     SUPPLEMENTAL_TEXT.italic = true
+    H1.font = Font.new(Font::SWISS,"Helvetica")
     H1.font_size = 40
     H1.bold = true
+    H2.font = H1.font
     H2.font_size = 36
     H2.bold = true
     H3.font_size = 26
@@ -130,9 +132,9 @@ class SkillSet
                 end
             end
         end
-        rtf.table(1,2,2 * INCH,4 * INCH) do |table|
+        rtf.table(1,2,INCH,5 * INCH) do |table|
             if !novice_skills.empty?
-                table[0][0].apply(LIST_DESCRIPTION) { |n| n << "Some experience with:" }
+                table[0][0].apply(LIST_DESCRIPTION) { |n| n << "Exposure to:" }
                 table[0][1].apply(LIST_DESCRIPTION) { |n| n << novice_skills.sort().join(", ") }
             end
         end
@@ -165,6 +167,13 @@ class ContactInfo
         rtf.paragraph(indent) << "#{@address.city}, #{@address.state} #{address.zip}" 
         rtf.paragraph(indent) << "#{phone}" 
         rtf.paragraph(indent) << "#{email}"
+
+        footer_style = CharacterStyle.new
+        footer_style.font_size = 16
+        footer_style.italic = true
+        footer = FooterNode.new(rtf)
+        rtf.footer=footer
+        rtf.footer.apply(footer_style) { |n| n << "Resume of #{@name}" }
     end
 end
 class Job

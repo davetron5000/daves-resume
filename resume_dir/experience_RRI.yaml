@@ -1,0 +1,16 @@
+--- !ruby/object:Job 
+date_range: &id012 !ruby/object:DateRange 
+  end_date: 1994-06-01
+  start_date: 1996-08-01
+location: Blacksburg, VA
+name: Recognition Research
+positions: 
+- !ruby/object:Position 
+  title: Software Engineer
+  description: Perform C and PERL-based design and coding for client work and internal tools.
+  date_range: *id012
+  achievements: 
+  - Successfully migrated configuration management system from RCS to CVS
+  - Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2.  This simplified the maintenance and overall cost of deployment of their core products.
+  - Worked on Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe.
+  - Refactored and then maintained a low-level image manipulation library in C

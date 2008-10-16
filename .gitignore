@@ -1,3 +1,7 @@
 .claret.yaml
 doc
 *.sw?
+resume_dir/*.bak
+README.html
+resume.rtf
+README.markdown

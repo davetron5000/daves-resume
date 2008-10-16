@@ -82,7 +82,8 @@ end
 
 class ContactInfo
     def to_markdown
-        "# #{name}\n\n+ **Address:**#{address.to_markdown}\n" + "+ **Phone:** #{phone}\n" + "+ **Email:** #{email}\n"
+        safe_email = email.gsub(/@/," at ").gsub(/\./," dot ");
+        "# #{name}\n\n+ **Address:** #{address.to_markdown}\n" + "+ **Phone:** #{phone}\n" + "+ **Email:** #{safe_email}\n"
     end
 end
 

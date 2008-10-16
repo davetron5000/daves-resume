@@ -1,0 +1,13 @@
+--- !ruby/object:Job 
+date_range: &id010 !ruby/object:DateRange 
+  end_date: 1997-05-01
+  start_date: 1997-09-01
+location: Chandler, AZ
+name: Evergreen Internet
+positions: 
+- !ruby/object:Position 
+  title: Software Engineer
+  description: Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
+  date_range: *id010
+  achievements: 
+  - Designed shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
