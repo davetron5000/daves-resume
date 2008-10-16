@@ -1,3 +1,5 @@
+require 'date'
+
 module Resume
 # The core elemens of the resume
 class ResumeCore
@@ -10,8 +12,8 @@ class ResumeCore
 
     def ResumeCore.scaffold
         core = ResumeCore.new
-        core.contact_info = Contact.scaffold
-        core.headling = "Sum up yourself here in this headline"
+        core.contact_info = ContactInfo.scaffold
+        core.headline = "Sum up yourself here in this headline"
         core.summary = "Provide a somewhat longer summary, in paragraph form, of why you are so awesome"
         core
     end
@@ -42,9 +44,9 @@ class Resume
     def Resume.scaffold
         resume = Resume.new
         resume.core = ResumeCore.scaffold
-        resume.experience << Experience.scaffold
-        resume.experience << Experience.scaffold
-        resume.skills << SkillSet.scaffold
+        resume.experience << Job.scaffold
+        resume.experience << Job.scaffold
+        resume.skills = SkillSet.scaffold
         resume.education << Education.scaffold
         resume.education << Education.scaffold("Rhode Island School of Design")
         resume.references << Reference.scaffold("John Q. Manager")
@@ -59,15 +61,19 @@ end
 class Sample
     attr_accessor :name
     attr_accessor :url
-    # a of SkillSet of the skills demonstrated by this sample
-    attr_accessor :skills
 
     def Sample.scaffold
         sample = Sample.new
         sample.name = "Name of this work sample"
         sample.url = "http://www.google.com"
-        sample.skills = SkillSet.scaffold
+        sample
     end
+
+    def <=>(other_sample)
+        return 1 if !other_sample 
+        @name <=> other_sample.name
+    end
+
 end
 # Represents a personal reference
 class Reference
@@ -78,11 +84,15 @@ class Reference
     attr_accessor :title
     attr_accessor :relationship
 
+    def safe_email
+        return @email.gsub(/@/," at ").gsub(/\./," dot ")
+    end
+
     def Reference.scaffold(name = nil)
         ref = Reference.new
         ref.name = name 
         ref.name = "Some Guy's Name" if !name
-        ref.phone = rand(10).to_s + rand(10).to_is + rand(10).to_s + "-555-1212"
+        ref.phone = rand(10).to_s + rand(10).to_s + rand(10).to_s + "-555-1212"
         ref.email = "someguy@someplace.com"
         ref.company = "Some Place"
         ref.relationship = "Boss"
@@ -124,8 +134,8 @@ class SkillSet
             :databases => "Sybase",
             :operating_systems => "OS/2",
         }
-        set = SkillSet.net
-        @@category.each() do |c|
+        set = SkillSet.new
+        @@categories.each() do |c|
             set.skills[c] = Array.new
             set.skills[c] << Skill.scaffold(rand_skills[c])
         end
@@ -160,11 +170,9 @@ class Skill
             1 => :intermdiate,
             2 => :expert,
         }
-        skill = Skill.new
-        skill.name = name
+        skill = Skill.new(name,exp[rand(3)])
         skill.name = "EBCIDIC" if !name
-        skill.experience_level = exp[rand(3)]
-        skill.years_experience = rand(10)
+        skill.years_experience = exp[rand(10)]
         skill
     end
 
@@ -200,6 +208,10 @@ class ContactInfo
     # An Address object
     attr_accessor :address
     attr_accessor :phone
+
+    def safe_email
+        return @email.gsub(/@/," at ").gsub(/\./," dot ")
+    end
 
     def ContactInfo.scaffold
         contact = ContactInfo.new
@@ -246,12 +258,15 @@ class Job
         job.date_range = DateRange.new
         year = 2000 + rand(3)
         job.date_range.start_date = Date.civil(year,01,01)
-        job.date_range.end = Date.civil(year + 2,01,01)
+        job.date_range.end_date = Date.civil(year + 2,01,01)
         job.location = "San Francisco, CA"
         job.positions << Position.scaffold("Lead Copy Boy",year+1)
         job.positions << Position.scaffold("Copy Boy",year)
+        job
     end
 end
+
+# 
 
 # A position held within a job
 class Position
@@ -262,6 +277,21 @@ class Position
     attr_accessor :description
     # Array of achievements
     attr_accessor :achievements
+
+    def initialize
+        @achievements = Array.new
+    end
+
+    def Position.scaffold(name,year)
+        position = Position.new
+        position.title = name
+        position.date_range = DateRange.new
+        position.date_range.start_date = Date.civil(year,01,01);
+        position.date_range.end_date = Date.civil(year,12,01);
+        position.description = "Enter in a description of the position you held"
+        position.achievements << "Enter your most important achievements first"
+        position.achievements << "Follow with additional ones, making sure to indicate the result of your actions"
+    end
 end
 
 class DateRange

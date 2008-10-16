@@ -139,3 +139,6 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 
 ### Virginia Tech - Bachelor of Science, Computer Science, 1996
 
+
+## Samples
+* [RestUnit (in progress)](http://github.com/davetron5000/restunit/tree/master)

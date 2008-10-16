@@ -11,9 +11,11 @@ include Resume
 
 RESUME_RTF = "resume.rtf"
 RESUME_MARKDOWN = "resume.markdown"
+SCAFFOLD_DIR = "scaffold"
 
 CLEAN.include RESUME_MARKDOWN
 CLEAN.include RESUME_RTF
+CLOBBER.include SCAFFOLD_DIR
 
 Rake::RDocTask.new do |rd|
     rd.rdoc_files.include("lib/**/*.rb")
@@ -38,4 +40,11 @@ task :readme => :markdown do |t|
     cp(RESUME_MARKDOWN, "README.markdown")
 end
 
+task :scaffold do |t|
+    puts ARGV
+    rm_rf "scaffold"
+    mkdir "scaffold"
+    resume = Resume::Resume.scaffold
+    Serializer.store("scaffold",resume)
+end
 task :default => [:rtf, :markdown]

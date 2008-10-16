@@ -24,13 +24,19 @@ class Resume
             markdown += "\n" +  edu.to_markdown
             markdown += "\n" +  "\n"
         end
+        if (@samples && !@samples.empty?)
+            markdown += "\n" + "## Samples\n"
+            @samples.sort().each() do |sample|
+                markdown += sample.to_markdown
+            end
+        end
         markdown
     end
 end
 
 class Sample
     def to_markdown
-        "**not implemented**"
+        "* [#{name}](#{url})\n"
     end
 end
 
@@ -82,7 +88,6 @@ end
 
 class ContactInfo
     def to_markdown
-        safe_email = email.gsub(/@/," at ").gsub(/\./," dot ");
         "# #{name}\n\n+ **Address:** #{address.to_markdown}\n" + "+ **Phone:** #{phone}\n" + "+ **Email:** #{safe_email}\n"
     end
 end

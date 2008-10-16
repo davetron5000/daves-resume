@@ -53,7 +53,7 @@ class Serializer
                 if (item.respond_to? :name)
                     filename += item.name.gsub(/\//,"_").gsub(/\s/,"_")
                 else
-                    filename += count
+                    filename += count.to_s
                 end
                 filename += ".yaml"
                 File.open("#{dir}/#{filename}",'w') { |out| YAML::dump(item,out) }
