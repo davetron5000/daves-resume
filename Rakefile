@@ -34,4 +34,8 @@ task :markdown => :read_resume do |t|
     File.open("resume.markdown",'w') { |fp| fp.puts resume.to_markdown() }
 end
 
+task :readme => :markdown do |t|
+    cp(RESUME_MARKDOWN, "README.markdown")
+end
+
 task :default => [:rtf, :markdown]
