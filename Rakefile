@@ -1,31 +1,37 @@
+$: << "lib"
+$: << "ext"
+
 require 'rake/clean'
 require 'rake/rdoctask'
+require "resume"
+require "markdown"
+require "richtext"
+require "serializer"
+include Resume
+
+RESUME_RTF = "resume.rtf"
+RESUME_MARKDOWN = "resume.markdown"
+
+CLEAN.include RESUME_MARKDOWN
+CLEAN.include RESUME_RTF
 
 Rake::RDocTask.new do |rd|
     rd.rdoc_files.include("lib/**/*.rb")
+    rd.rdoc_files.include("ext/**/*.rb")
 end
 
-desc 'Runs tests'
-task :test do |t|
-    $: << 'lib'
-    $: << 'test'
-#    require 'testTask.rb'
-#    require 'testProject.rb'
-#    Test::Unit::UI::Console::TestRunner.run(TC_testTask)
-#    Test::Unit::UI::Console::TestRunner.run(TC_testProject)
-#    Test::Unit::UI::Console::TestRunner.run(TC_testProjectDecompose)
+resume = nil
+
+task :read_resume do |t|
+    resume = Serializer.load("resume_dir")
 end
 
-task :clobber_coverage do
-    rm_rf "coverage"
+task :rtf => :read_resume do |t|
+    File.open('resume.rtf','w') {|file| file.write(resume.to_rtf.to_rtf)}
 end
 
-desc 'Measures test coverage'
-task :coverage => :clobber_coverage do
-    rcov = "rcov -Ilib"
-    system("#{rcov} test/test*.rb")
-    system("open coverage/index.html") if PLATFORM['darwin']
+task :markdown => :read_resume do |t|
+    File.open("resume.markdown",'w') { |fp| fp.puts resume.to_markdown() }
 end
 
-task :default => :test
-task :clobber => :clobber_coverage
+task :default => [:rtf, :markdown]
