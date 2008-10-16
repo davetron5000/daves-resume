@@ -16,7 +16,7 @@ class Resume
         end
 
         markdown += "\n" +  "## Experience"
-        @experience.sort() { |a,b| a.date_range<=> b.date_range}.each() do |exp|
+        @experience.sort() { |a,b| b.date_range<=> a.date_range}.each() do |exp|
             markdown += "\n" +  exp.to_markdown
         end
         markdown += "\n" +  "## Education"

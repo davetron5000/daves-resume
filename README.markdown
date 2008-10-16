@@ -17,58 +17,16 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 + *Some experience with*:WebObjects, Weblogic, ERWin, Oracle, OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam
 
 ## Experience
-### Recognition Research (Blacksburg, VA)
-#### Software Engineer
-_8/1996 - 6/1994_
+### Gliffy.com (San Francisco, CA)
+#### Senior Software Engineer (Contract, Telecommute)
+_4/2008 - 10/2008_
 
-Perform C and PERL-based design and coding for client work and internal tools.
+Design and implement REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other 'Web 2.0' applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
 
-+ Successfully migrated configuration management system from RCS to CVS
-+ Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2.  This simplified the maintenance and overall cost of deployment of their core products.
-+ Worked on Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe.
-+ Refactored and then maintained a low-level image manipulation library in C
-
-
-### Evergreen Internet (Chandler, AZ)
-#### Software Engineer
-_9/1997 - 5/1997_
-
-Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
-
-+ Designed shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
-
-
-### Arizona State University (Tempe, AZ)
-#### Research Assistant
-_12/1997 - 9/1996_
-
-Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research
-
-+ Designed and collected metrics for flight-control software engineering group
-+ Performed analysis of metrics and reported findings to quality assurance team at Honeywell
-
-
-### Publicis Dialog (formerly Novo/Ironlight) (San Francisco, CA)
-_2/1998 - 2/2002_
-
-#### Software Engineering Director
-_6/1999 - 2/2002_
-
-Manage department of software engineers and HTML programmers.  Participate in recruiting, training, career development, and employee performance reviews.  Provide technical leadership and development processes.  Provide project estimation and allocate staff to projects.  Perform Java design and development when needed.
-
-+ Standardized development process and tools; this allowed developers to immediately start work on a project without reinventing the wheel before every project.
-+ Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems.
-+ Ensured the successful delivery of numerous projects as well as successful support of business development efforts.
-+ Participated in organization-wide development process establishment, unifying business procurement, design, and development into an iterative, repeatable process.
-
-#### Software Engineer
-_2/1998 - 6/1999_
-
-Perform software design and development for web-based systems.  Coordinate developers and HTML programmers for Toyota.com.  Provide work estimates to support business development and project planning.
-
-+ As technical lead for Toyota.com, migrated site from ad-hoc management to version-controlled system based on CVS.  This was crucial in reducing the cost and increasing the fault-tolerance of site updates.
-+ Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers.
-+ As lead developer for averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
++ Designed a REST-based web service API for integrating Gliffy into any web-enabled software.  This opens the door to increased market-share, new products, and increased revenue
++ Created a MediaWiki plug-in for Gliffy's product that they can sell support for, opening an additional revenue path for the company
++ Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate, thus reducing the maintenance and enhancement costs of Gliffy's flagship product
++ Created a test-bed for Gliffy's flash-based application as well as the Developer API that made refactoring possible as well as reduced the cost of maintenance.
 
 
 ### Provident Analysis (Fairfax, VA)
@@ -120,16 +78,58 @@ Design and develop Java code for US Marshals Service case management and analysi
 + Created prototype mobile interface to criminal search system by re-using EJB-based business logic; sticking to standards and using a distributed design allowed for very fast prototyping, keeping costs down for the government.
 
 
-### Gliffy.com (San Francisco, CA)
-#### Senior Software Engineer (Contract, Telecommute)
-_4/2008 - 10/2008_
+### Publicis Dialog (formerly Novo/Ironlight) (San Francisco, CA)
+_2/1998 - 2/2002_
 
-Design and implement REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other 'Web 2.0' applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
+#### Software Engineering Director
+_6/1999 - 2/2002_
 
-+ Designed a REST-based web service API for integrating Gliffy into any web-enabled software.  This opens the door to increased market-share, new products, and increased revenue
-+ Created a MediaWiki plug-in for Gliffy's product that they can sell support for, opening an additional revenue path for the company
-+ Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate, thus reducing the maintenance and enhancement costs of Gliffy's flagship product
-+ Created a test-bed for Gliffy's flash-based application as well as the Developer API that made refactoring possible as well as reduced the cost of maintenance.
+Manage department of software engineers and HTML programmers.  Participate in recruiting, training, career development, and employee performance reviews.  Provide technical leadership and development processes.  Provide project estimation and allocate staff to projects.  Perform Java design and development when needed.
+
++ Standardized development process and tools; this allowed developers to immediately start work on a project without reinventing the wheel before every project.
++ Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems.
++ Ensured the successful delivery of numerous projects as well as successful support of business development efforts.
++ Participated in organization-wide development process establishment, unifying business procurement, design, and development into an iterative, repeatable process.
+
+#### Software Engineer
+_2/1998 - 6/1999_
+
+Perform software design and development for web-based systems.  Coordinate developers and HTML programmers for Toyota.com.  Provide work estimates to support business development and project planning.
+
++ As technical lead for Toyota.com, migrated site from ad-hoc management to version-controlled system based on CVS.  This was crucial in reducing the cost and increasing the fault-tolerance of site updates.
++ Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers.
++ As lead developer for averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
+
+
+### Arizona State University (Tempe, AZ)
+#### Research Assistant
+_12/1997 - 9/1996_
+
+Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research
+
++ Designed and collected metrics for flight-control software engineering group
++ Performed analysis of metrics and reported findings to quality assurance team at Honeywell
+
+
+### Evergreen Internet (Chandler, AZ)
+#### Software Engineer
+_9/1997 - 5/1997_
+
+Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
+
++ Designed shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
+
+
+### Recognition Research (Blacksburg, VA)
+#### Software Engineer
+_8/1996 - 6/1994_
+
+Perform C and PERL-based design and coding for client work and internal tools.
+
++ Successfully migrated configuration management system from RCS to CVS
++ Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2.  This simplified the maintenance and overall cost of deployment of their core products.
++ Worked on Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe.
++ Refactored and then maintained a low-level image manipulation library in C
 
 
 ## Education
