@@ -4,8 +4,8 @@ $: << "ext"
 require 'rake/clean'
 require 'rake/rdoctask'
 require "resume"
-require "markdown"
-require "richtext"
+require "format/markdown"
+require "format/richtext"
 require "serializer"
 include Resume
 
@@ -29,12 +29,12 @@ task :read_resume do |t|
 end
 
 task :rtf => :read_resume do |t|
-    formatter = RTFFormat.new(resume)
+    formatter = Format::RTFFormat.new(resume)
     formatter.to_file(RESUME_RTF)
 end
 
 task :markdown => :read_resume do |t|
-    formatter = MarkdownFormat.new(resume)
+    formatter = Format::MarkdownFormat.new(resume)
     formatter.to_file(RESUME_MARKDOWN)
 end
 

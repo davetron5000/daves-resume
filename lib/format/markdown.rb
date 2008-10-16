@@ -1,8 +1,9 @@
-require "formatter"
+require "format/formatter"
 
 module Resume
+module Format
 
-# The entire resume
+# This formats the resume in Markdown
 class MarkdownFormat < Format
 
     def initialize(resume)
@@ -10,6 +11,7 @@ class MarkdownFormat < Format
         @resume = resume
     end
 
+    # Formats and writes the output to the give filename
     def to_file(file_name)
         format
         File.open(file_name,'w') {|file| file.write(@markdown.string) }
@@ -98,5 +100,5 @@ class MarkdownFormat < Format
         @markdown << "* [#{sample.name}](#{sample.url})\n"
     end
 end
-
+end
 end

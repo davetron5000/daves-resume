@@ -1,12 +1,14 @@
 require 'rubygems'
 require 'rtf'
 require 'rtf_style'
-require 'formatter'
+require 'format/formatter'
 
 include RTF
 
 module Resume
+module Format
 
+# Formats the resume as RTF
 class RTFFormat <  Format
 
     QUARTER_INCH = 360
@@ -56,6 +58,7 @@ class RTFFormat <  Format
         end
     end
 
+    # Formats the resume via format and outputs the results to the named file
     def to_file(file)
         format
         File.open(file,'w') {|file| file.write(rtf.to_rtf)}
@@ -198,5 +201,6 @@ class RTFFormat <  Format
         table[0][0].apply(LIST_ITEM) { |n| n << "#{label}:" }
         table[0][1].apply(LIST_DESCRIPTION) { |n| n << skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ") }
     end
+end
 end
 end

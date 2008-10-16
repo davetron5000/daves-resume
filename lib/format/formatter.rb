@@ -1,6 +1,8 @@
 module Resume
+module Format
 
-# This formats the resume in a given way
+# This provides hooks for formatting the resume in a consistent way, despite the 
+# actual output format
 class Format
 
     def format
@@ -31,4 +33,5 @@ class Format
     end
 end
 
+end
 end
