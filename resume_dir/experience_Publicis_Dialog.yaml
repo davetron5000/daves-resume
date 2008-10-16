@@ -23,6 +23,6 @@ positions:
     end_date: 1999-06-01
     start_date: 1998-02-01
   achievements: 
-  - As technical lead for Toyota.com, migrated site from ad-hoc management to version-controlled system based on CVS.  This was crucial in reducing the cost and increasing the fault-tolerance of site updates.
+  - As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS.  This was crucial in reducing the cost and increasing the fault-tolerance of site updates.
   - Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers.
   - As lead developer for averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.

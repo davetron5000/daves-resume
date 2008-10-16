@@ -10,4 +10,4 @@ positions:
   description: Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
   date_range: *id010
   achievements: 
-  - Designed shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
+  - Designed shopping cart and shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
