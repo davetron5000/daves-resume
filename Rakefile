@@ -50,6 +50,6 @@ task :scaffold do |t|
     mkdir SCAFFOLD_DIR
     resume = Resume::Resume.scaffold
     Serializer.store(SCAFFOLD_DIR,resume)
-    puts "Rename SCAFFOLD_DIR to the directory of your choice, then edit your resume"
+    puts "Rename #{SCAFFOLD_DIR}/ to the directory of your choice, then edit your resume"
 end
 task :default => [:rtf, :markdown]

@@ -139,7 +139,8 @@ class SkillSet
             :operating_systems => "OS/2",
         }
         set = SkillSet.new
-        @@categories.each() do |c|
+        @@category_order.each() do |c|
+            puts "Skill for #{c}"
             set.skills[c] = Array.new
             set.skills[c] << Skill.scaffold(rand_skills[c])
         end
@@ -159,8 +160,15 @@ class Skill
     end
 
     def <=>(other_skill)
+        return 1 if (other_skill == nil)
         if (other_skill.experience_level == @experience_level)
-            return @years_experience <=> other_skill.years_experience
+            if other_skill.years_experience 
+                return @years_experience <=> other_skill.years_experience
+            elsif @years_experience
+                return 1
+            else
+                return 0
+            end
         else
             return 1 if (@experience_level == :expert)
             return 1 if (@experience_level == :intermediate && other_skill.experience_level == :novice)
@@ -176,7 +184,7 @@ class Skill
         }
         skill = Skill.new(name,exp[rand(3)])
         skill.name = "EBCIDIC" if !name
-        skill.years_experience = exp[rand(10)]
+        skill.years_experience = rand(10) + 1
         skill
     end
 
@@ -239,6 +247,7 @@ class Address
         address.city = "Sometown"
         address.state = "AZ"
         address.zip = "94118"
+        address
     end
 end
 
@@ -295,6 +304,7 @@ class Position
         position.description = "Enter in a description of the position you held"
         position.achievements << "Enter your most important achievements first"
         position.achievements << "Follow with additional ones, making sure to indicate the result of your actions"
+        position
     end
 end
 
