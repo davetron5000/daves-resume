@@ -96,7 +96,7 @@ class Job
     def to_markdown
         markdown = "### #{name} (#{location})\n"
         if (!@positions || @positions.size() != 1)
-            markdown += "_#{date_range.to_markdown}_\n\n"
+            markdown += "_#{date_range.to_s}_\n\n"
         end
 
         positions.each() do |p|
@@ -109,7 +109,7 @@ end
 
 class Position
     def to_markdown
-        markdown = "#### #{title}\n_#{date_range.to_markdown}_\n\n#{description}\n\n"
+        markdown = "#### #{title}\n_#{date_range.to_s}_\n\n#{description}\n\n"
         achievments.each() do |a|
             markdown += "+ #{a}\n"
         end
@@ -118,12 +118,5 @@ class Position
 end
 
 class DateRange
-    def to_markdown
-        if (@end_date)
-            return "#{start_date.month}/#{start_date.year} - #{end_date.month}/#{start_date.year}"
-        else
-            return "#{start_date.month}/#{start_date.year} - present"
-        end
-    end
 end
 end

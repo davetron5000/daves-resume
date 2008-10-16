@@ -150,5 +150,13 @@ class DateRange
     def <=>(other_range)
         return @start_date <=> other_range.start_date
     end
+
+    def to_s
+        if (@end_date)
+            return "#{start_date.month}/#{start_date.year} - #{end_date.month}/#{end_date.year}"
+        else
+            return "#{start_date.month}/#{start_date.year} - present"
+        end
+    end
 end
 end
