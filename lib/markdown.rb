@@ -88,7 +88,7 @@ end
 
 class Address
     def to_markdown
-        "#{street}\n#{city}, #{state} #{zip}"
+        "#{city}, #{state} #{zip}"
     end
 end
 
@@ -110,7 +110,7 @@ end
 class Position
     def to_markdown
         markdown = "#### #{title}\n_#{date_range.to_s}_\n\n#{description}\n\n"
-        achievments.each() do |a|
+        achievements.each() do |a|
             markdown += "+ #{a}\n"
         end
         markdown

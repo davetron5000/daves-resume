@@ -6,7 +6,7 @@ location: Fairfax, VA
 name: Provident Analysis
 positions: 
 - !ruby/object:Position 
-  achievments: 
+  achievements: 
   - Established development procedures and best-practices; new team members were able to contribute working code within days of starting
   - Conducted code and design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
   - Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
@@ -14,10 +14,10 @@ positions:
   date_range: &id003 !ruby/object:DateRange 
     end_date: 2008-04-01
     start_date: 2007-11-01
-  description: Create software architecture and design for enterprise systems at US Marshals Service.  Mentor new and junior members of staff.  Provide development procedures and tools.  Design re-usable frameworks and other Java implementations.  Perform database design and refactoring.  Provide estimates and recommend staff allocation to projec tasks.  Perform Java design and development.
+  description: Create software architecture and design for enterprise systems at US Marshals Service.  Mentor new and junior members of staff.  Provide development procedures and tools.  Design re-usable frameworks and other Java implementations.  Perform database design and refactoring.  Provide estimates and recommend staff allocation to project tasks.  Perform Java design and development.
   title: Technical Lead
 - !ruby/object:Position 
-  achievments: 
+  achievements: 
   - Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; this provided the CIO's office a clear and understandable overview of all technical deployments.
   - Performed data architecture analysis of existing legacy databases, looking for common elements; this was the start of providing a unified data architecture that will keep maintenance costs low and ensure consistent analysis throughout MARAD
   - Took ownership of system development process and delivered working process and document templates within a month of starting
@@ -30,14 +30,27 @@ positions:
   description: Provide technical direction and leadership to both DOT Maritime Administration (MARAD) CIO as well as development staff.  Create and establish system development lifecycle process and supporting artifact descriptions.  Create tactical plan for following year based on enterprise architecture analysis.  Develop longer-term strategic plan.
   title: Technical Architect
 - !ruby/object:Position 
-  achievments: 
+  title: Technical Lead/Architect
+  description: Create technical architecture and system design for unified data-drive application for US Marshals Service.   Perform process and policy analysis to gather requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Perform Java design and development.
+  achievements: 
   - Designed technical architecture for unifying and modernizing two key systems and databases for US Marshals Service using a J2EE-compliant distributed architecture based on EJB, Hibernate, and Swing.  This will provide them a long-term viable and usable platform for business process integration and more sophisticated analysis of criminal activity.
   - Created user interface style guide and a Swing framework in support of it; this allows developers to easily create consistent interfaces regardless of IDE.
   - Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; this system would be the first to completely enforce booking policies at an organization-wide level.
-  - Produced frequent builds of the application to get user and client feedback frequently in the deveopment cycle; this allowed us to refine and understand the requirements by presenting working code early in the process.
+  - Produced frequent builds of the application to get user and client feedback frequently in the development cycle; this allowed us to refine and understand the requirements by presenting working code early in the process.
   - Produced US Marshals-required SDLC documents for requirements, system design, and system maintenance.
-  date_range: &id004 !ruby/object:DateRange 
+  date_range: &id005 !ruby/object:DateRange 
     end_date: 2006-10-01
     start_date: 2005-09-01
-  description: Create technical architecture and system design for unified data-drive application for US Marshals Service.   Perform process and policy analysis to gather requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Perform Java design and development.
-  title: Technical Lead/Architect
+- !ruby/object:Position 
+  title: Senior Software Engineer
+  description: Design and develop Java code for US Marshals Service case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
+  achievements: 
+  - Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing.  This system is used daily at USMS and the modernized version provides many usability and workflow enhancements.
+  - Successfully migrated technical infrastructure from Weblogic to JBoss.  By sticking to standards, we saved the USMS significant cost in both licensing and maintenance.
+  - Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp.  Trainers could author, review, and approve content, while users could seamlessly experiment with a "training" application
+  - Conducted usability tests with cross-functional users group and re-implemented system based on feedback.  This was a key achievement in the success of our application as we were the system really did have enhanced usability.
+  - Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment.  This allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff.
+  - Created prototype mobile interface to criminal search system by re-using EJB-based business logic; sticking to standards and using a distributed design allowed for very fast prototyping, keeping costs down for the government.
+  date_range: &id006 !ruby/object:DateRange 
+    end_date: 2002-04-01
+    start_date: 2005-09-01

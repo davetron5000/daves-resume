@@ -198,7 +198,7 @@ class Position
         rtf.paragraph do |p|
             p.italic().apply(TEN_POINT) { |n| n << "#{description}" }
         end
-        achievments.each() do |a|
+        achievements.each() do |a|
             add_bullet(rtf,a)
         end
         rtf

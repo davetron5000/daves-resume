@@ -6,11 +6,11 @@ location: San Francisco, CA
 name: Gliffy.com
 positions: 
 - !ruby/object:Position 
-  achievments: 
-  - Designed a REST-based web service API for integrating Gliffy into any web-enabled software.  This opens the door to increased marketshare, new products, and increased revenue
-  - Created a MediaWiki plugin for Gliffy's product that they can sell support for, opening an additional revenue path for the company
+  achievements: 
+  - Designed a REST-based web service API for integrating Gliffy into any web-enabled software.  This opens the door to increased market-share, new products, and increased revenue
+  - Created a MediaWiki plug-in for Gliffy's product that they can sell support for, opening an additional revenue path for the company
   - Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate, thus reducing the maintenance and enhancement costs of Gliffy's flagship product
-  - Created a testbed for Gliffy's flash-based application as well as the Developer API that made refactoring possible as well as reduced the cost of maintenance.
+  - Created a test-bed for Gliffy's flash-based application as well as the Developer API that made refactoring possible as well as reduced the cost of maintenance.
   date_range: *id001
   description: Design and implement REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other 'Web 2.0' applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
   title: Senior Software Engineer (Contract, Telecommute)

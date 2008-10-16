@@ -140,7 +140,7 @@ class Position
     # Description of the position's requirements
     attr_accessor :description
     # Array of achievements
-    attr_accessor :achievments
+    attr_accessor :achievements
 end
 
 class DateRange
