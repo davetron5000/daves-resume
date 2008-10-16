@@ -19,7 +19,6 @@ class Serializer
         resume.references = read(dir,"references");
         resume.samples = read(dir,"samples");
         return resume
-
     end
 
     def Serializer.read(dir,base_name)
