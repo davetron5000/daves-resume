@@ -119,6 +119,10 @@ class SkillSet
         :databases,
         :operating_systems,
     ]
+
+    def SkillSet.category_order; @@category_order; end
+    def SkillSet.categories; @@categories; end
+
     # Hash of category to skill objects
     attr_accessor :skills
 

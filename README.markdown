@@ -7,14 +7,16 @@
 * * *
 A results-oriented technical leader with proven success designing, developing, and deploying enterprise software systems
 ## Summary
+
 Proven abilities as a developer, leader, and mentor.  Produces high-quality deliverables through pragmatic, results-driven best practices.  Deep technical expertise with enterprise Java, object-oriented design, and software development processes.  Has lead successful teams as an architect, technical lead, and department manager.  History of improving the quality of every project, team, and deliverable by balancing business, user, and technical needs.
 ## Skills
+
 + **Languages**: Java, SQL, C, PERL, HTML, C++, XML, CSS, Ruby, PHP
 + **APIs**: J2EE/JavaEE, Servlets, JDBC, EJB (v2 and 3), Swing, Java Persistence, Hibernate, JavaHelp, JSP, JUnit, TestNG, HTTP/REST, JMS, JAXB
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*:WebObjects, Weblogic, ERWin, Oracle, OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam
++ *Some experience with*:OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin, Oracle
 
 ## Experience
 ### Gliffy.com (San Francisco, CA)
@@ -27,7 +29,6 @@ Design and implement REST-based developer API in Java/J2EE and PHP for integrati
 + Created a MediaWiki plug-in for Gliffy's product that they can sell support for, opening an additional revenue path for the company
 + Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate, thus reducing the maintenance and enhancement costs of Gliffy's flagship product
 + Created a test-bed for Gliffy's flash-based application as well as the Developer API that made refactoring possible as well as reduced the cost of maintenance.
-
 
 ### Provident Analysis (Fairfax, VA)
 _4/2002 - 4/2008_
@@ -77,7 +78,6 @@ Design and develop Java code for US Marshals Service case management and analysi
 + Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment.  This allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff.
 + Created prototype mobile interface to criminal search system by re-using EJB-based business logic; sticking to standards and using a distributed design allowed for very fast prototyping, keeping costs down for the government.
 
-
 ### Publicis Dialog (formerly Novo/Ironlight) (San Francisco, CA)
 _2/1998 - 2/2002_
 
@@ -100,7 +100,6 @@ Perform software design and development for web-based systems.  Coordinate devel
 + Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers.
 + As lead developer for averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
 
-
 ### Arizona State University (Tempe, AZ)
 #### Research Assistant
 _12/1997 - 9/1996_
@@ -110,7 +109,6 @@ Conduct software engineering process research at Honeywell to support both Honey
 + Designed and collected metrics for flight-control software engineering group
 + Performed analysis of metrics and reported findings to quality assurance team at Honeywell
 
-
 ### Evergreen Internet (Chandler, AZ)
 #### Software Engineer
 _9/1997 - 5/1997_
@@ -118,7 +116,6 @@ _9/1997 - 5/1997_
 Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
 
 + Designed shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
-
 
 ### Recognition Research (Blacksburg, VA)
 #### Software Engineer
@@ -135,7 +132,6 @@ Perform C and PERL-based design and coding for client work and internal tools.
 ## Education
 ### Arizona State University - Master of Science, Computer Science, 1997
 Thesis: 'A Methodology for Software Verification and Validation Process Improvement'
-
 
 ### Virginia Tech - Bachelor of Science, Computer Science, 1996
 

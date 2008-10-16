@@ -1,128 +1,102 @@
+require "formatter"
+
 module Resume
 
 # The entire resume
-class Resume
-    def to_markdown
-        markdown = @core.contact_info.to_markdown
-        markdown += "\n" +  "* * *"
-        markdown += "\n" +  @core.headline
-        markdown += "\n" +  "## Summary"
-        markdown += "\n" +  @core.summary
+class MarkdownFormat < Format
 
-        if (@skills)
-            markdown += "\n" +  "## Skills"
-            markdown += "\n" +  @skills.to_markdown
-            markdown += "\n"
-        end
-
-        markdown += "\n" +  "## Experience"
-        @experience.sort() { |a,b| b.date_range<=> a.date_range}.each() do |exp|
-            markdown += "\n" +  exp.to_markdown
-        end
-        markdown += "\n" +  "## Education"
-        @education.sort() { |a,b| b.year_graduated <=> a.year_graduated }.each() do |edu|
-            markdown += "\n" +  edu.to_markdown
-            markdown += "\n" +  "\n"
-        end
-        if (@samples && !@samples.empty?)
-            markdown += "\n" + "## Samples\n"
-            @samples.sort().each() do |sample|
-                markdown += sample.to_markdown
-            end
-        end
-        markdown
+    def initialize(resume)
+        @markdown = StringIO.new
+        @resume = resume
     end
-end
 
-class Sample
-    def to_markdown
-        "* [#{name}](#{url})\n"
+    def to_file(file_name)
+        format
+        File.open(file_name,'w') {|file| file.write(@markdown.string) }
     end
-end
 
-# Represents a personal reference
-class Reference
-    def to_markdown
-        "**not implemented**"
+    def output_contact
+        @markdown << "# #{@resume.core.contact_info.name}\n\n+ **Address:** "
+        @markdown << "#{@resume.core.contact_info.address.city}, #{@resume.core.contact_info.address.state} #{@resume.core.contact_info.address.zip}\n"
+        @markdown << "+ **Phone:** #{@resume.core.contact_info.phone}\n" + "+ **Email:** #{@resume.core.contact_info.safe_email}\n"
+        @markdown << "\n" +  "* * *"
     end
-end
 
-# Represents all skills
-class SkillSet
+    def add_section_heading(label)
+        @markdown << "\n" +  "## #{label}\n"
+    end
 
-    def to_markdown
-        markdown = ""
-        @@category_order.each() do |s|
-            markdown += category_to_markdown(s,@@categories[s])
+    def output_headline
+        @markdown << "\n" +  @resume.core.headline
+    end
+
+    def output_summary
+        add_section_heading("Summary")
+        @markdown << "\n" +  @resume.core.summary
+    end
+
+    def output_skills
+        if (@resume.skills)
+            add_section_heading("Skills")
+            @markdown << "\n"
+            output_skillset(@resume.skills.skills)
+            @markdown << "\n"
+        end
+
+    end
+
+    def output_skillset(skills)
+        SkillSet.category_order.each() do |s|
+            skillset_category_to_markdown(s,SkillSet.categories[s],skills)
         end
         novice_skills = Array.new
         skills.each() do |k,v|
             novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
         end
         if !novice_skills.empty?
-            markdown += "+ *Some experience with*:" + novice_skills.join(", ")
+            @markdown << "+ *Some experience with*:" + novice_skills.join(", ")
         end
     end
 
-    def category_to_markdown(category,label)
-        markdown = ""
-        skills = @skills[category]
-        if (skills && !skills.empty?)
-            markdown += "+ **#{label}**: "
-            markdown += skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ")
-            markdown += "\n"
+    def skillset_category_to_markdown(category,label,skills)
+        these_skills = skills[category]
+        if (these_skills && !these_skills.empty?)
+            @markdown << "+ **#{label}**: "
+            @markdown << these_skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ")
+            @markdown << "\n"
         end
-        markdown
     end
-end
 
-class Education
-    def to_markdown
-        markdown = "### #{name} - #{degree}, #{major}, #{year_graduated}"
-        if (@other_info)
-            markdown += "\n#{other_info}"
-        end
-        markdown
-    end
-end
-
-class ContactInfo
-    def to_markdown
-        "# #{name}\n\n+ **Address:** #{address.to_markdown}\n" + "+ **Phone:** #{phone}\n" + "+ **Email:** #{safe_email}\n"
-    end
-end
-
-class Address
-    def to_markdown
-        "#{city}, #{state} #{zip}"
-    end
-end
-
-class Job
-    def to_markdown
-        markdown = "### #{name} (#{location})\n"
-        if (!@positions || @positions.size() != 1)
-            markdown += "_#{date_range.to_s}_\n\n"
+    def output_experience(exp)
+        @markdown << "### #{exp.name} (#{exp.location})\n"
+        if (!exp.positions || exp.positions.size() != 1)
+            @markdown << "_#{exp.date_range.to_s}_\n\n"
         end
 
-        positions.each() do |p|
-            markdown += p.to_markdown
-            markdown += "\n"
+        exp.positions.each() do |p|
+            output_position(p)
+            @markdown << "\n"
         end
-        markdown
+        @markdown
+    end
+    def output_position(position)
+        @markdown << "#### #{position.title}\n_#{position.date_range.to_s}_\n\n#{position.description}\n\n"
+        position.achievements.each() do |a|
+            @markdown << "+ #{a}\n"
+        end
+    end
+
+    def output_education(edu)
+        @markdown << "### #{edu.name} - #{edu.degree}, #{edu.major}, #{edu.year_graduated}"
+        if (edu.other_info)
+            @markdown << "\n#{edu.other_info}"
+        end
+            @markdown << "\n" +  "\n"
+    end
+
+    def output_sample(sample)
+        @markdown << "* [#{sample.name}](#{sample.url})\n"
     end
 end
 
-class Position
-    def to_markdown
-        markdown = "#### #{title}\n_#{date_range.to_s}_\n\n#{description}\n\n"
-        achievements.each() do |a|
-            markdown += "+ #{a}\n"
-        end
-        markdown
-    end
-end
-
-class DateRange
-end
 end

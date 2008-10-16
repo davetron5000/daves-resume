@@ -29,11 +29,13 @@ task :read_resume do |t|
 end
 
 task :rtf => :read_resume do |t|
-    File.open('resume.rtf','w') {|file| file.write(resume.to_rtf.to_rtf)}
+    formatter = RTFFormat.new(resume)
+    formatter.to_file(RESUME_RTF)
 end
 
 task :markdown => :read_resume do |t|
-    File.open("resume.markdown",'w') { |fp| fp.puts resume.to_markdown() }
+    formatter = MarkdownFormat.new(resume)
+    formatter.to_file(RESUME_MARKDOWN)
 end
 
 task :readme => :markdown do |t|

@@ -1,10 +1,13 @@
 require 'rubygems'
 require 'rtf'
-require 'rtf_style.rb'
+require 'rtf_style'
+require 'formatter'
 
 include RTF
 
 module Resume
+
+class RTFFormat <  Format
 
     QUARTER_INCH = 360
     HALF_INCH = QUARTER_INCH * 2
@@ -53,30 +56,64 @@ module Resume
         end
     end
 
+    def to_file(file)
+        format
+        File.open(file,'w') {|file| file.write(rtf.to_rtf)}
+    end
+
     def add_heading(rtf,style,label)
         rtf.paragraph(HEAD_INDENT) do |p|
             p.apply(style) { |n| n << label }
         end
     end
-# The entire resume
-class Resume
-    def to_rtf
+
+    attr_reader :rtf
+
+    def initialize(resume)
+        @resume = resume
         style = DocumentStyle.new
         style.top_margin = INCH
         style.left_margin = INCH + QUARTER_INCH
         style.right_margin = INCH
         style.bottom_margin = INCH
         style.paper = Paper::LETTER
-        rtf = Document.new(Font.new(Font::SWISS,"Georgia"),style)
-        @core.contact_info.to_rtf(rtf)
-        rtf.paragraph << " "
+        @rtf = Document.new(Font.new(Font::SWISS,"Georgia"),style)
 
+        footer_style = CharacterStyle.new
+        footer_style.font_size = 16
+        footer_style.italic = true
+        footer = FooterNode.new(@rtf)
+        @rtf.footer=footer
+        @rtf.footer.apply(footer_style) { |n| n << "Resume of #{resume.core.contact_info.name}" }
+
+    end
+
+    def output_contact
+        info = @resume.core.contact_info
+        add_heading(rtf,H1,info.name)
+        indent = ParagraphStyle.new
+        #rtf.paragraph(indent) << @address.street
+        rtf.paragraph(indent) << "#{info.address.city}, #{info.address.state} #{info.address.zip}" 
+        rtf.paragraph(indent) << "#{info.phone}" 
+        rtf.paragraph(indent) << "#{info.email}"
+        rtf.paragraph << " "
+    end
+
+
+    def output_headline
         heading_style = CharacterStyle.new
         heading_style.font_size = 24
         heading_style.bold = true
-        rtf.paragraph(heading_style) << @core.headline
+        rtf.paragraph(heading_style) << @resume.core.headline
         rtf.paragraph << " "
-        add_heading(rtf,H2,"Summary")
+    end
+
+    def add_section_heading(label)
+        add_heading(rtf,H2,label)
+    end
+
+    def output_summary
+        add_section_heading("Summary")
 
         summary_style = ParagraphStyle.new
         rtf.paragraph(summary_style) do |n|
@@ -84,51 +121,68 @@ class Resume
             font.italic = true
             font.font_size = 22
             n.apply(font) do |n2|
-                n2 << @core.summary
+                n2 << @resume.core.summary
+            end
+        end
+    end
+
+    def output_skills
+        if (@resume.skills)
+            add_section_heading("Skills")
+            output_skillset
+        end
+    end
+
+    def output_experience(exp)
+        indent = ParagraphStyle.new
+        indent.left_indent = (-1 * (QUARTER_INCH / 2))
+        rtf.paragraph(indent) do |p|
+            p.apply(H3) do |n| 
+                n << "#{exp.name} (#{exp.location}) " 
+                if exp.positions && !exp.positions.empty?
+                    n.italic() << " #{exp.date_range.to_s}"
+                end
             end
         end
 
-        if (@skills)
-            add_heading(rtf,H2,"Skills")
-            @skills.to_rtf(rtf)
+        exp.positions.each() do |p|
+            output_position(p,exp.positions.size() > 1)
         end
+    end
+    def output_position(p,include_date)
 
-        add_heading(rtf,H2,"Experience")
-        @experience.sort() { |a,b| b.date_range <=> a.date_range}.each() do |exp|
-            exp.to_rtf(rtf)
+        if (include_date)
+            rtf.paragraph(H4).underline().italic() << "#{p.title} (#{p.date_range.to_s})"
+        else
+            rtf.paragraph(H4).underline().italic() << "#{p.title}"
         end
-        add_heading(rtf,H2,"Education")
-        @education.sort() { |a,b| b.year_graduated <=> a.year_graduated }.each() do |edu|
-            edu.to_rtf(rtf)
+        rtf.paragraph do |para|
+            para.italic().apply(TEN_POINT) { |n| n << "#{p.description}" }
         end
-        rtf
+        p.achievements.each() do |a|
+            add_bullet(rtf,a)
+        end
     end
-end
 
-class Sample
-    def to_rtf
-        "**not implemented**"
+    def output_education(edu)
+        rtf.paragraph(H3) << "#{edu.name} - #{edu.degree}, #{edu.major}, #{edu.year_graduated}" 
+        if (edu.other_info)
+            rtf.paragraph(SUPPLEMENTAL) do |p|
+                p.apply(SUPPLEMENTAL_TEXT) { |n| n << "#{edu.other_info}" }
+            end
+        end
     end
-end
 
-# Represents a personal reference
-class Reference
-    def to_rtf
-        "**not implemented**"
-    end
-end
-
-class SkillSet
-    def to_rtf(rtf)
+    def output_skillset
         novice_skills = Array.new
-        skills.each() do |k,v|
+        @resume.skills.skills.each() do |k,v|
             novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
         end
-        @@category_order.each() do |s|
+        SkillSet.category_order.each() do |s|
             rtf.table(1,2,INCH,5 * INCH) do |table|
-                skills = @skills[s]
+                skills = @resume.skills.skills[s]
                 if skills && !skills.empty?
-                    category_to_rtf(skills,@@categories[s],table)
+                    skillset_category_to_rtf(skills,SkillSet.categories[s],table)
                 end
             end
         end
@@ -140,77 +194,9 @@ class SkillSet
         end
     end
 
-    def category_to_rtf(skills,label,table)
+    def skillset_category_to_rtf(skills,label,table)
         table[0][0].apply(LIST_ITEM) { |n| n << "#{label}:" }
         table[0][1].apply(LIST_DESCRIPTION) { |n| n << skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ") }
-    end
-end
-
-class Education
-    def to_rtf(rtf)
-
-        rtf.paragraph(H3) << "#{name} - #{degree}, #{major}, #{year_graduated}" 
-        if (@other_info)
-            rtf.paragraph(SUPPLEMENTAL) do |p|
-                p.apply(SUPPLEMENTAL_TEXT) { |n| n << "#{other_info}" }
-            end
-        end
-        rtf
-    end
-end
-
-class ContactInfo
-    def to_rtf(rtf)
-        add_heading(rtf,H1,@name)
-        indent = ParagraphStyle.new
-        #rtf.paragraph(indent) << @address.street
-        rtf.paragraph(indent) << "#{@address.city}, #{@address.state} #{address.zip}" 
-        rtf.paragraph(indent) << "#{phone}" 
-        rtf.paragraph(indent) << "#{email}"
-
-        footer_style = CharacterStyle.new
-        footer_style.font_size = 16
-        footer_style.italic = true
-        footer = FooterNode.new(rtf)
-        rtf.footer=footer
-        rtf.footer.apply(footer_style) { |n| n << "Resume of #{@name}" }
-    end
-end
-class Job
-    def to_rtf(rtf)
-
-        indent = ParagraphStyle.new
-        indent.left_indent = (-1 * (QUARTER_INCH / 2))
-        rtf.paragraph(indent) do |p|
-            p.apply(H3) do |n| 
-                n << "#{name} (#{location}) " 
-                if @positions && !@positions.empty?
-                    n.italic() << " #{date_range.to_s}"
-                end
-            end
-        end
-
-        positions.each() do |p|
-            p.to_rtf(rtf,positions.size() > 1)
-        end
-        rtf
-    end
-end
-
-class Position
-    def to_rtf(rtf,include_date)
-        if (include_date)
-            rtf.paragraph(H4).underline().italic() << "#{title} (#{date_range.to_s})"
-        else
-            rtf.paragraph(H4).underline().italic() << "#{title}"
-        end
-        rtf.paragraph do |p|
-            p.italic().apply(TEN_POINT) { |n| n << "#{description}" }
-        end
-        achievements.each() do |a|
-            add_bullet(rtf,a)
-        end
-        rtf
     end
 end
 end
