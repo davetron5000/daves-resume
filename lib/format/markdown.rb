@@ -82,7 +82,9 @@ class MarkdownFormat < Format
         @markdown
     end
     def output_position(position)
-        @markdown << "#### #{position.title}\n_#{position.date_range.to_s}_\n\n#{position.description}\n\n"
+        @markdown << "#### #{position.title}\n_#{position.date_range.to_s}_\n\n"
+        @markdown << "_Description:_ #{position.description}\n\n"
+        @markdown << "Key Achievements:\n\n"
         position.achievements.each() do |a|
             @markdown << "+ #{a}\n"
         end

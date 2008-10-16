@@ -160,7 +160,13 @@ class RTFFormat <  Format
             rtf.paragraph(H4).underline().italic() << "#{p.title}"
         end
         rtf.paragraph do |para|
-            para.italic().apply(TEN_POINT) { |n| n << "#{p.description}" }
+            para.italic().apply(TEN_POINT) do |n| 
+                n.bold() << "Description: "
+                n << "#{p.description}" 
+            end
+        end
+        rtf.paragraph do |para|
+            para.apply(TEN_POINT) { |n| n.bold() << "Key Achievements:" }
         end
         p.achievements.each() do |a|
             add_bullet(rtf,a)
