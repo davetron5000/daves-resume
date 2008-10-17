@@ -11,6 +11,6 @@ positions:
   date_range: *id012
   achievements: 
   - Successfully migrated configuration management system from RCS to CVS
-  - Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2.  This simplified the maintenance and overall cost of deployment of their core products.
-  - Worked on Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe.
-  - Refactored and then maintained a low-level image manipulation library in C
+  - Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
+  - Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
+  - Refactored and maintained a low-level image manipulation library in C

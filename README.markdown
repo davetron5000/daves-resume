@@ -27,10 +27,10 @@ _Description:_ Design and implement REST-based developer API in Java/J2EE and PH
 
 Key Achievements:
 
-+ Designed a REST-based web service API for integrating Gliffy into any web-enabled software.  This opens the door to increased market-share, new products, and increased revenue
-+ Created a MediaWiki plug-in for Gliffy's product that they can sell support for, opening an additional revenue path for the company
-+ Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate, thus reducing the maintenance and enhancement costs of Gliffy's flagship product
-+ Created a test-bed for Gliffy's flash-based application and Developer API that made refactoring possible as well as reduced the cost of maintenance.
++ Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased market-share, new products, and increased revenue
++ Created a MediaWiki plug-in for Gliffy's product that they can sell support for; opens additional revenue paths for the company
++ Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate; reduced the maintenance and enhancement costs of Gliffy's flagship product
++ Created a test-bed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
 
 ### Provident Analysis (Fairfax, VA)
 _4/2002 - 4/2008_
@@ -54,12 +54,12 @@ _Description:_ As part of Enterprise Architecture (EA) group, provide technical 
 
 Key Achievements:
 
-+ Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; this provided the CIO a clear and usable overview of all technical assets and deployments.
-+ Performed analysis of existing legacy databases, looking for common elements and usage patterns; this was the first step to providing a unified data architecture that will keep maintenance costs low and ensure consistent analysis throughout MARAD
++ Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; provided the CIO a clear and usable overview of all technical assets and deployments
++ Performed analysis of existing legacy databases, looking for common elements and usage patterns; supported providing a unified data architecture to reduce maintenance costs and ensure consistent data analysis
 + Took ownership of system development process and delivered working process and document templates within a month of starting
 + Developed system development guide for CIO; this allows her to ensure consistent deployments and maintainable solutions, regardless of who the service-provider is
 + Mentored developers in J2EE best-practices
-+ Performed technical evaluation of issue-tracking tools to find a low-cost, high-utility solution for the project team
++ Performed technical evaluation of issue-tracking tools; recommended a low-cost, high-utility solution for the project team
 
 #### Technical Lead/Architect
 _9/2005 - 10/2006_
@@ -68,11 +68,11 @@ _Description:_ Create technical architecture and system design for unified data-
 
 Key Achievements:
 
-+ Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE-based distributed architecture based on EJB, Hibernate, and Swing.  This will provide them a long-term viable and usable platform for business process integration and more sophisticated analysis of criminal activity.
-+ Created user interface style guide and a Swing framework in support of it; this allows developers to easily create consistent interfaces regardless of IDE.
-+ Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; this system would be the first to completely support all booking policies at an organization-wide level.
-+ Gathered client feedback frequently during the development cycle; this allowed us to refine and understand the requirements by presenting working code early in the process.
-+ Produced required SDLC documents for requirements, system design, and system maintenance.
++ Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE-based distributed architecture based on EJB, Hibernate, and Swing; provided for a long-term viable and usable platform to use for business process integration and sophisticated analysis of criminal activity
++ Created user interface style guide and a Swing framework in support of it; allowed developers to easily create consistent user interfaces regardless of IDE
++ Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies at an organization-wide level
++ Gathered client feedback frequently during the development cycle; allowed team to refine and understand the requirements by presenting working code early in the process
++ Produced required SDLC documents for requirements, system design, and system maintenance
 
 #### Senior Software Engineer
 _9/2005 - 4/2002_
@@ -81,12 +81,12 @@ _Description:_ Design and develop Java code for US Marshals Service case managem
 
 Key Achievements:
 
-+ Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing.  This system is used daily at USMS and the modernized version provides many usability and workflow enhancements.
-+ Successfully migrated technical infrastructure from Weblogic to JBoss.  By designing to standards and going open-source, we saved the USMS significant cost in both licensing and maintenance.
-+ Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp.  Trainers could author, review, and approve content, while users could seamlessly experiment with a "training" version of the application
-+ Conducted usability tests with cross-functional users group and revised system based on user feedback.  This was a key achievement in the success of our application and gave us high confidences that we were delivering a more usable product.
-+ Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment.  This allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff.
-+ Created prototype of mobile interface to a USMS criminal search system by re-using EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, keeping costs down for the government.
++ Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided many usability and workflow enhancements over legacy system and is used daily within the USMS
++ Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source saved USMS significant cost in both licensing and maintenance
++ Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Trainers could author content and users could train on a live version of the application
++ Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
++ Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
++ Created prototype of mobile interface to a USMS criminal search system by re-using EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, keeping costs down for the government
 
 ### Publicis Dialog (formerly Novo/Ironlight) (San Francisco, CA)
 _2/1998 - 2/2002_
@@ -98,10 +98,10 @@ _Description:_ Manage department of software engineers and HTML programmers.  Pa
 
 Key Achievements:
 
-+ Standardized development process and tools; this allowed developers to immediately start work on a project without reinventing the wheel before every project.
-+ Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems.
-+ Ensured the successful delivery of numerous projects as well as successful support of business development efforts.
-+ Participated in organization-wide development process establishment, unifying business procurement, design, and development into an iterative, repeatable process.
++ Standardized development process and tools; developers could immediately start work on a new project without reinventing the wheel
++ Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems
++ Ensured the successful delivery of numerous projects as well as successful support of business development efforts
++ Participated in organization-wide development process establishment; unifyied business procurement, design, and development into an iterative, repeatable process
 
 #### Software Engineer
 _2/1998 - 6/1999_
@@ -110,9 +110,9 @@ _Description:_ Perform software design and development for web-based systems.  C
 
 Key Achievements:
 
-+ As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS.  This was crucial in reducing the cost and increasing the fault-tolerance of site updates.
-+ Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers.
-+ As lead developer for averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
++ As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS; significantly reduced the cost, while increased the fault-tolerance of, site updates
++ Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers
++ Lead development of averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
 
 ### Arizona State University (Tempe, AZ)
 #### Research Assistant
@@ -133,7 +133,7 @@ _Description:_ Design and development of C++-based E-commerce system.  Enhanceme
 
 Key Achievements:
 
-+ Designed shopping cart and shipping features for flagship E-Commerce system that allowed users to ship items to multiple locations
++ Designed shopping cart and shipping features for flagship E-Commerce system which allowed users to ship items to multiple locations
 
 ### Recognition Research (Blacksburg, VA)
 #### Software Engineer
@@ -144,9 +144,9 @@ _Description:_ Perform C and PERL-based design and coding for client work and in
 Key Achievements:
 
 + Successfully migrated configuration management system from RCS to CVS
-+ Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2.  This simplified the maintenance and overall cost of deployment of their core products.
-+ Worked on Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe.
-+ Refactored and then maintained a low-level image manipulation library in C
++ Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
++ Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
++ Refactored and maintained a low-level image manipulation library in C
 
 
 ## Education
@@ -155,6 +155,9 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 
 ### Virginia Tech - Bachelor of Science, Computer Science, 1996
 
+
+## Samples
+* [Adventure (C++)](http://naildrivin5.com/adventure/)
 
 ## Samples
 * [RestUnit (in progress)](http://github.com/davetron5000/restunit/tree/master)

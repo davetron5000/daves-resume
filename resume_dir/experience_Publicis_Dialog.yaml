@@ -12,10 +12,10 @@ positions:
     end_date: 2002-02-01
     start_date: 1999-06-01
   achievements: 
-  - Standardized development process and tools; this allowed developers to immediately start work on a project without reinventing the wheel before every project.
-  - Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems.
-  - Ensured the successful delivery of numerous projects as well as successful support of business development efforts.
-  - Participated in organization-wide development process establishment, unifying business procurement, design, and development into an iterative, repeatable process.
+  - Standardized development process and tools; developers could immediately start work on a new project without reinventing the wheel
+  - Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems
+  - Ensured the successful delivery of numerous projects as well as successful support of business development efforts
+  - Participated in organization-wide development process establishment; unifyied business procurement, design, and development into an iterative, repeatable process
 - !ruby/object:Position 
   title: Software Engineer
   description: Perform software design and development for web-based systems.  Coordinate developers and HTML programmers for Toyota.com.  Provide work estimates to support business development and project planning.
@@ -23,6 +23,6 @@ positions:
     end_date: 1999-06-01
     start_date: 1998-02-01
   achievements: 
-  - As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS.  This was crucial in reducing the cost and increasing the fault-tolerance of site updates.
-  - Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers.
-  - As lead developer for averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
+  - As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS; significantly reduced the cost, while increased the fault-tolerance of, site updates
+  - Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers
+  - Lead development of averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
