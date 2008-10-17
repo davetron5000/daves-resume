@@ -7,7 +7,7 @@ name: Recognition Research
 positions: 
 - !ruby/object:Position 
   title: Software Engineer
-  description: Perform C and PERL-based design and coding for client work and internal tools.
+  description: Perform C and Perl-based design and coding for client work and internal tools.
   date_range: *id012
   achievements: 
   - !str

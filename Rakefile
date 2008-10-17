@@ -49,6 +49,10 @@ task :readme => :markdown do |t|
     cp(RESUME_MARKDOWN, "README.markdown")
 end
 
+task :word => :rtf do |t|
+    cp(RESUME_RTF,"Resume_of_David_Copeland.doc")
+end
+
 desc "Blows away and creates #{SCAFFOLD_DIR}, containg sample YAML for your resume"
 task :scaffold do |t|
     puts ARGV

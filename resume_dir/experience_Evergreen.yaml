@@ -7,7 +7,7 @@ name: Evergreen Internet
 positions: 
 - !ruby/object:Position 
   title: Software Engineer
-  description: Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
+  description: Design and develop C++-based E-commerce system.  Develope enhancements to Perl-based E-commerce system
   date_range: *id010
   achievements: 
   - !str

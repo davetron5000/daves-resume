@@ -183,7 +183,7 @@ skills:
     years_experience: 3
   - !ruby/object:Skill 
     experience_level: :intermediate
-    name: PERL
+    name: Perl
     years_experience: 14
   - !ruby/object:Skill 
     experience_level: :intermediate

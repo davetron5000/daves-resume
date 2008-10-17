@@ -16,7 +16,7 @@ positions:
     - :developer
     - :web20
   - !str
-    str: Created a MediaWiki plug-in for Gliffy's product that they can sell support for; opens additional revenue paths for the company
+    str: Created MediaWiki plug-in for Gliffy's product for which they can sell support; opened additional revenue path for the company
     "@tags":
     - :web20
     - :php
