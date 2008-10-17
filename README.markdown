@@ -11,7 +11,7 @@ A results-oriented technical leader with proven success designing, developing, a
 Proven abilities as a developer, leader, and mentor.  Produces high-quality deliverables through pragmatic, results-driven best practices.  Deep technical expertise with enterprise Java, object-oriented design, and software development processes.  History of improving the quality of every project, team, and deliverable by balancing business, user, and technical needs.  Has lead successful teams as an architect, technical lead, and department manager.
 ## Skills
 
-+ **Languages**: Java, SQL, C, PERL, HTML, C++, XML, CSS, Ruby, PHP
++ **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, Ruby, PHP
 + **APIs**: J2EE/JavaEE, Servlets, JDBC, EJB (v2 and 3), Swing, Java Persistence, Hibernate, JavaHelp, JSP, JUnit, TestNG, HTTP/REST, JMS, JAXB
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
 + **Databases**: Informix, MySQL
@@ -28,7 +28,7 @@ _Description:_ Design and implement REST-based developer API in Java/J2EE and PH
 Key Achievements:
 
 + Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased market-share, new products, and increased revenue
-+ Created a MediaWiki plug-in for Gliffy's product that they can sell support for; opens additional revenue paths for the company
++ Created MediaWiki plug-in for Gliffy's product for which they can sell support; opened additional revenue path for the company
 + Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate; reduced the maintenance and enhancement costs of Gliffy's flagship product
 + Created a test-bed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
 
@@ -124,7 +124,7 @@ Key Achievements:
 #### Software Engineer
 _9/1997 - 5/1997_
 
-_Description:_ Design and development of C++-based E-commerce system.  Enhancements to PERL-based E-commerce system
+_Description:_ Design and develop C++-based E-commerce system.  Develope enhancements to Perl-based E-commerce system
 
 Key Achievements:
 
@@ -134,7 +134,7 @@ Key Achievements:
 #### Software Engineer
 _8/1996 - 6/1994_
 
-_Description:_ Perform C and PERL-based design and coding for client work and internal tools.
+_Description:_ Perform C and Perl-based design and coding for client work and internal tools.
 
 Key Achievements:
 
