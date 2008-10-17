@@ -1,4 +1,5 @@
 require 'date'
+require 'string_tags.rb'
 
 module Resume
 # The core elemens of the resume
@@ -304,6 +305,11 @@ class Position
         position.description = "Enter in a description of the position you held"
         position.achievements << "Enter your most important achievements first"
         position.achievements << "Follow with additional ones, making sure to indicate the result of your actions"
+        position.achievements[0].tags = Array.new
+        position.achievements[0].tags << :important
+        position.achievements[0].tags << :architect
+        position.achievements[1].tags = Array.new
+        position.achievements[1].tags << :architect
         position
     end
 end

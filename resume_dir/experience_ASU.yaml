@@ -10,5 +10,12 @@ positions:
   description: Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research
   date_range: *id011
   achievements: 
-  - Designed and collected metrics for flight-control software engineering group
-  - Performed analysis of metrics and reported findings to quality assurance team at Honeywell
+  - !str
+    str: Designed and collected metrics for flight-control software engineering group
+    "@tags":
+    - :process
+  - !str
+    str: Performed analysis of metrics and reported findings to quality assurance team at Honeywell
+    "@tags":
+    - :process
+    - :qa

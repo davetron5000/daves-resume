@@ -85,7 +85,8 @@ class MarkdownFormat < Format
         @markdown << "#### #{position.title}\n_#{position.date_range.to_s}_\n\n"
         @markdown << "_Description:_ #{position.description}\n\n"
         @markdown << "Key Achievements:\n\n"
-        position.achievements.each() do |a|
+        achievements = filter_achievements(position.achievements)
+        achievements.each() do |a|
             @markdown << "+ #{a}\n"
         end
     end

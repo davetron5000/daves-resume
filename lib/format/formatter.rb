@@ -5,6 +5,9 @@ module Format
 # actual output format
 class Format
 
+    # Filter for achievements, should be a Proc that takes one argumement, the Array of achievement strings
+    attr_accessor :achievement_filter
+
     def format
         output_contact
         output_headline
@@ -25,6 +28,14 @@ class Format
             @resume.samples.each() do |sample|
                 output_sample(sample)
             end
+        end
+    end
+
+    def filter_achievements(achievements)
+        if (achievement_filter)
+            return achievement_filter.call(achievements)
+        else
+            return achievements
         end
     end
 

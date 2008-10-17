@@ -171,7 +171,8 @@ class RTFFormat <  Format
         rtf.paragraph do |para|
             para.apply(TEN_POINT) { |n| n.bold() << "Key Achievements:" }
         end
-        p.achievements.each() do |a|
+        achievements = filter_achievements(p.achievements)
+        achievements.each() do |a|
             add_bullet(rtf,a)
         end
         rtf.paragraph << " "

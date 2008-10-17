@@ -7,10 +7,35 @@ name: Gliffy.com
 positions: 
 - !ruby/object:Position 
   achievements: 
-  - Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased market-share, new products, and increased revenue
-  - Created a MediaWiki plug-in for Gliffy's product that they can sell support for; opens additional revenue paths for the company
-  - Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate; reduced the maintenance and enhancement costs of Gliffy's flagship product
-  - Created a test-bed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
+  - !str
+    str: Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased market-share, new products, and increased revenue
+    "@tags":
+    - :web_services
+    - :rest
+    - :architect
+    - :developer
+    - :web20
+  - !str
+    str: Created a MediaWiki plug-in for Gliffy's product that they can sell support for; opens additional revenue paths for the company
+    "@tags":
+    - :web20
+    - :php
+    - :architect
+  - !str
+    str: Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate; reduced the maintenance and enhancement costs of Gliffy's flagship product
+    "@tags":
+    - :jdbc
+    - :JPA
+    - :hibernate
+    - :developer
+    - :major
+  - !str
+    str: Created a test-bed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
+    "@tags":
+    - :testing
+    - :qa
+    - :developer
+    - :major
   date_range: *id001
   description: Design and implement REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other 'Web 2.0' applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
   title: Senior Software Engineer (Contract)

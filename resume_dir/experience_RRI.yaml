@@ -10,7 +10,23 @@ positions:
   description: Perform C and PERL-based design and coding for client work and internal tools.
   date_range: *id012
   achievements: 
-  - Successfully migrated configuration management system from RCS to CVS
-  - Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
-  - Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
+  - !str
+    str: Successfully migrated configuration management system from RCS to CVS
+    "@tags":
+    - :process
+    - :cvs
+    - :major
+  - !str
+    str: Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
+    "@tags":
+    - :process
+    - :cvs
+    - :make
+    - :perl
+    - :developer
+  - !str
+    str: Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
+    "@tags":
+    - :c
+    - :developer
   - Refactored and maintained a low-level image manipulation library in C

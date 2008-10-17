@@ -28,13 +28,19 @@ task :read_resume do |t|
     resume = Serializer.load(RESUME_YAML)
 end
 
+def configure_formatter(formatter)
+    formatter.achievement_filter = ACHIEVEMENT_FILTER
+end
+
 task :rtf => :read_resume do |t|
     formatter = Format::RTFFormat.new(resume)
+    configure_formatter formatter
     formatter.to_file(RESUME_RTF)
 end
 
 task :markdown => :read_resume do |t|
     formatter = Format::MarkdownFormat.new(resume)
+    configure_formatter formatter
     formatter.to_file(RESUME_MARKDOWN)
 end
 

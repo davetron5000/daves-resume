@@ -16,7 +16,7 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*:Oracle, OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin
++ *Some experience with*:OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin, Oracle
 
 ## Experience
 ### Gliffy.com (San Francisco, CA (telecommute))
@@ -42,7 +42,6 @@ _Description:_ Create software architecture and design for enterprise systems at
 
 Key Achievements:
 
-+ Established development procedures and best-practices; new team members were able to contribute working code within days of starting
 + Conducted code, design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
 + Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
 + Designed and implemented key use-cases for USMS prisoner tracking system

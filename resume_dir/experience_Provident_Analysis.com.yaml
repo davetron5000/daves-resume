@@ -1,3 +1,4 @@
+
 --- !ruby/object:Job 
 date_range: &id002 !ruby/object:DateRange 
   end_date: 2008-04-01
@@ -6,24 +7,67 @@ location: Fairfax, VA
 name: Provident Analysis
 positions: 
 - !ruby/object:Position 
-  achievements: 
-  - Established development procedures and best-practices; new team members were able to contribute working code within days of starting
-  - Conducted code, design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
-  - Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
-  - Designed and implemented key use-cases for USMS prisoner tracking system
+  title: Technical Lead
+  description: Create software architecture and design for enterprise systems at US Marshals Service (USMS).  Mentor new and junior members of staff.  Provide development procedures and tools.  Design and implement re-usable components for USMS key systems. Perform database design and refactoring.  Provide estimates and recommend staff assignment to project tasks.  Perform Java design and development.
   date_range: &id003 !ruby/object:DateRange 
     end_date: 2008-04-01
     start_date: 2007-11-01
-  description: Create software architecture and design for enterprise systems at US Marshals Service (USMS).  Mentor new and junior members of staff.  Provide development procedures and tools.  Design and implement re-usable components for USMS key systems. Perform database design and refactoring.  Provide estimates and recommend staff assignment to project tasks.  Perform Java design and development.
-  title: Technical Lead
+  achievements: 
+  - !str
+    str: Established development procedures and best-practices; new team members were able to contribute working code within days of starting
+    "@tags":
+    - :process
+    - :lead
+  - !str
+    str: Conducted code, design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
+    "@tags":
+    - :lead
+    - :swing
+    - :hibernate
+    - :ejb
+    - :j2ee
+    - :reviews
+  - !str
+    str: Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
+    "@tags":
+    - :lead
+    - :pm
+    - :minor
+  - !str
+    str: Designed and implemented key use-cases for USMS prisoner tracking system
+    "@tags":
+    - :developer
 - !ruby/object:Position 
   achievements: 
-  - Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; provided the CIO a clear and usable overview of all technical assets and deployments
-  - Performed analysis of existing legacy databases, looking for common elements and usage patterns; supported providing a unified data architecture to reduce maintenance costs and ensure consistent data analysis
-  - Took ownership of system development process and delivered working process and document templates within a month of starting
-  - Developed system development guide for CIO; this allows her to ensure consistent deployments and maintainable solutions, regardless of who the service-provider is
-  - Mentored developers in J2EE best-practices
-  - Performed technical evaluation of issue-tracking tools; recommended a low-cost, high-utility solution for the project team
+  - !str
+    str: Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; provided the CIO a clear and usable overview of all technical assets and deployments
+    "@tags":
+    - :process
+    - :architect
+  - !str
+    str: Performed analysis of existing legacy databases, looking for common elements and usage patterns; supported providing a unified data architecture to reduce maintenance costs and ensure consistent data analysis
+    "@tags":
+    - :architect
+    - :database
+  - !str
+    str: Took ownership of system development process and delivered working process and document templates within a month of starting
+    "@tags":
+    - :process
+  - !str
+    str: Developed system development guide for CIO; ensures consistent deployments and maintainable solutions, regardless of service-provider
+    "@tags":
+    - :process
+    - :lead
+  - !str
+    str: Mentored developers in J2EE best-practices
+    "@tags":
+    - :lead
+    - :j2ee
+  - !str
+    str: Performed technical evaluation of issue-tracking tools; recommended a low-cost, high-utility solution for the project team
+    "@tags":
+    - :architect
+    - :minor
   date_range: &id004 !ruby/object:DateRange 
     end_date: 2007-10-01
     start_date: 2006-10-01
@@ -33,11 +77,32 @@ positions:
   title: Technical Lead/Architect
   description: Create technical architecture and system design for unified data-driven application for US Marshals Service.   Perform process and policy analysis to gather requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Perform Java design and development.
   achievements: 
-  - Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE-based distributed architecture based on EJB, Hibernate, and Swing; provided for a long-term viable and usable platform to use for business process integration and sophisticated analysis of criminal activity
-  - Created user interface style guide and a Swing framework in support of it; allowed developers to easily create consistent user interfaces regardless of IDE
-  - Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies at an organization-wide level
-  - Gathered client feedback frequently during the development cycle; allowed team to refine and understand the requirements by presenting working code early in the process
-  - Produced required SDLC documents for requirements, system design, and system maintenance
+  - !str
+    str: Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE distributed architecture based on EJB, Hibernate, and Swing; provided a long-term viable and highly usable platform for business process integration
+    "@tags":
+    - :architect
+    - :j2ee
+    - :ejb
+    - :hibernate
+    - :swing
+  - !str
+    str: Created user interface style guide and a Swing framework in support of it; allowed developers to easily create consistent user interfaces regardless of IDE
+    "@tags":
+    - :ui
+    - :architect
+    - :swing
+  - !str
+    str: Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies at an organization-wide level
+    "@tags":
+    - :requirements
+  - !str
+    str: Gathered client feedback frequently during the development cycle; allowed team to refine and understand the requirements by presenting working code early in the process
+    "@tags":
+    - :process
+  - !str
+    str: Produced required SDLC documents for requirements, system design, and system maintenance
+    "@tags":
+    - :process
   date_range: &id005 !ruby/object:DateRange 
     end_date: 2006-10-01
     start_date: 2005-09-01
@@ -45,12 +110,44 @@ positions:
   title: Senior Software Engineer
   description: Design and develop Java code for US Marshals Service case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
   achievements: 
-  - Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided many usability and workflow enhancements over legacy system and is used daily within the USMS
-  - Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source saved USMS significant cost in both licensing and maintenance
-  - Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Trainers could author content and users could train on a live version of the application
-  - Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
-  - Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
-  - Created prototype of mobile interface to a USMS criminal search system by re-using EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, keeping costs down for the government
+  - !str
+    str: Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided many usability and workflow enhancements over legacy system and is used daily within the USMS
+    "@tags":
+    - :developer
+    - :j2ee
+    - :swing
+    - :ejb
+  - !str
+    str: Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source saved USMS significant cost in both licensing and maintenance
+    "@tags":
+    - :developer
+    - :jboss
+    - :weblogic
+  - !str
+    str: Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Trainers could author content and users could train on a live version of the application
+    "@tags":
+    - :developer
+    - :javahelp
+    - :swing
+  - !str
+    str: Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
+    "@tags":
+    - :ui
+    - :lead
+  - !str
+    str: Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
+    "@tags":
+    - :lead
+    - :process
+  - !str
+    str: Created prototype of mobile interface to a USMS criminal search system by re-using EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, keeping costs down for the government
+    "@tags":
+    - :developer
+    - :j2ee
+    - :ejb
+    - :servlets
+    - :jsp
+    - :minor
   date_range: &id006 !ruby/object:DateRange 
     end_date: 2002-04-01
     start_date: 2005-09-01
