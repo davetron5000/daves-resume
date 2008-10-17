@@ -42,6 +42,7 @@ _Description:_ Create software architecture and design for enterprise systems at
 
 Key Achievements:
 
++ Established development procedures and best-practices; new team members were able to contribute working code within days of starting
 + Conducted code, design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
 + Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
 + Designed and implemented key use-cases for USMS prisoner tracking system
@@ -55,8 +56,7 @@ Key Achievements:
 
 + Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; provided the CIO a clear and usable overview of all technical assets and deployments
 + Performed analysis of existing legacy databases, looking for common elements and usage patterns; supported providing a unified data architecture to reduce maintenance costs and ensure consistent data analysis
-+ Took ownership of system development process and delivered working process and document templates within a month of starting
-+ Developed system development guide for CIO; this allows her to ensure consistent deployments and maintainable solutions, regardless of who the service-provider is
++ Developed system development guide for CIO; ensures consistent deployments and maintainable solutions, regardless of service-provider
 + Mentored developers in J2EE best-practices
 + Performed technical evaluation of issue-tracking tools; recommended a low-cost, high-utility solution for the project team
 
@@ -67,11 +67,8 @@ _Description:_ Create technical architecture and system design for unified data-
 
 Key Achievements:
 
-+ Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE-based distributed architecture based on EJB, Hibernate, and Swing; provided for a long-term viable and usable platform to use for business process integration and sophisticated analysis of criminal activity
++ Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE distributed architecture based on EJB, Hibernate, and Swing; provided a long-term viable and highly usable platform for business process integration
 + Created user interface style guide and a Swing framework in support of it; allowed developers to easily create consistent user interfaces regardless of IDE
-+ Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies at an organization-wide level
-+ Gathered client feedback frequently during the development cycle; allowed team to refine and understand the requirements by presenting working code early in the process
-+ Produced required SDLC documents for requirements, system design, and system maintenance
 
 #### Senior Software Engineer
 _9/2005 - 4/2002_
@@ -80,12 +77,11 @@ _Description:_ Design and develop Java code for US Marshals Service case managem
 
 Key Achievements:
 
++ Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
++ Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
 + Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided many usability and workflow enhancements over legacy system and is used daily within the USMS
 + Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source saved USMS significant cost in both licensing and maintenance
 + Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Trainers could author content and users could train on a live version of the application
-+ Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
-+ Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
-+ Created prototype of mobile interface to a USMS criminal search system by re-using EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, keeping costs down for the government
 
 ### Publicis Dialog (formerly Novo/Ironlight) (San Francisco, CA)
 _2/1998 - 2/2002_
@@ -99,7 +95,7 @@ Key Achievements:
 
 + Standardized development process and tools; developers could immediately start work on a new project without reinventing the wheel
 + Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems
-+ Ensured the successful delivery of numerous projects as well as successful support of business development efforts
++ Ensured the successful delivery of numerous Java web projects as well as successful support of business development efforts
 + Participated in organization-wide development process establishment; unifyied business procurement, design, and development into an iterative, repeatable process
 
 #### Software Engineer
@@ -143,9 +139,9 @@ _Description:_ Perform C and PERL-based design and coding for client work and in
 Key Achievements:
 
 + Successfully migrated configuration management system from RCS to CVS
++ Refactored and maintained a low-level image manipulation library in C
 + Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
 + Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
-+ Refactored and maintained a low-level image manipulation library in C
 
 
 ## Education
