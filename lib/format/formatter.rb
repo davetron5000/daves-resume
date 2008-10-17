@@ -21,8 +21,8 @@ class Format
         end
 
         if respond_to? :output_sample
+            add_section_heading("Samples")
             @resume.samples.each() do |sample|
-                add_section_heading("Samples")
                 output_sample(sample)
             end
         end

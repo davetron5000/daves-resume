@@ -158,6 +158,4 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 
 ## Samples
 * [Adventure (C++)](http://naildrivin5.com/adventure/)
-
-## Samples
 * [RestUnit (in progress)](http://github.com/davetron5000/restunit/tree/master)
