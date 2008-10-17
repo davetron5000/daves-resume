@@ -34,6 +34,8 @@ Basically, the resume is:
         * :databases
         * :operating_systems
 * Experience - any file that starts with <tt>experience_</tt> and ends in <tt>.yaml</tt> will get picked up.  The formatter will sort things in reverse chronological order for you.  A Job consists of one or more positions, and the formatter should be smart about handling jobs with only one position.
+  * Acheivements can be tagged and you can use these tags to control your output
+  * <tt>conf/conf.rb</tt> has an example; you create a <tt>Proc</tt> that receives the list of achievements for a particular job. This proc must evaulate to the list you want to be rendered.  <tt>ext/string_tags.rb</tt> adds a <tt>tags</tt> method to the String class, so you can access the tags of your key achievements and do whatever filtering you want (or none).
 * Education - works like Experience files starting with <tt>education</tt> will get picked up and sorted reverse chronologically
 * Samples - this is just a name and a link, and only shows up in the Markdown version.
 * References - this isn't used anywhere right now, but any file starting with <tt>reference_</tt>  and ending with <tt>.yaml</tt> will get picked up.
@@ -44,9 +46,6 @@ Basically, the resume is:
 
 = TODO
 
-The other reason I did this is so that I could generate customized resumes more easily.  To that end, I may implement some sort of conditional pre-processing or tagging to allow that to happen.
-
-* Create tagging for skills and achievements to allow focusing a resume, but storing a lot of info
 * Don't hard-code the categories
 * Possibly a section for awards/certifications
 * Maybe some test cases?
