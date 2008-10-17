@@ -46,7 +46,6 @@ class RTFFormat <  Format
     H3.font_size = 26
     H3.bold = true
     H4.font_size = 24
-    H4.bold = true
 
     TEN_POINT = CharacterStyle.new
     TEN_POINT.font_size = 20
@@ -141,10 +140,13 @@ class RTFFormat <  Format
         indent.left_indent = (-1 * (QUARTER_INCH / 2))
         rtf.paragraph(indent) do |p|
             p.apply(H3) do |n| 
-                n << "#{exp.name} (#{exp.location}) " 
-                if exp.positions && !exp.positions.empty?
-                    n.italic() << " #{exp.date_range.to_s}"
-                end
+                n << "#{exp.name}"
+            end
+        end
+        rtf.paragraph(indent) do |n|
+            n << "#{exp.location}" 
+            if exp.positions && !exp.positions.empty?
+                n << "\t#{exp.date_range.to_s}"
             end
         end
 
@@ -155,9 +157,9 @@ class RTFFormat <  Format
     def output_position(p,include_date)
 
         if (include_date)
-            rtf.paragraph(H4).underline().italic() << "#{p.title} (#{p.date_range.to_s})"
+            rtf.paragraph(H4).underline() << "#{p.title}\t#{p.date_range.to_s}"
         else
-            rtf.paragraph(H4).underline().italic() << "#{p.title}"
+            rtf.paragraph(H4).underline() << "#{p.title}"
         end
         rtf.paragraph do |para|
             para.italic().apply(TEN_POINT) do |n| 
@@ -165,12 +167,14 @@ class RTFFormat <  Format
                 n << "#{p.description}" 
             end
         end
+        rtf.paragraph << " "
         rtf.paragraph do |para|
             para.apply(TEN_POINT) { |n| n.bold() << "Key Achievements:" }
         end
         p.achievements.each() do |a|
             add_bullet(rtf,a)
         end
+        rtf.paragraph << " "
     end
 
     def output_education(edu)
