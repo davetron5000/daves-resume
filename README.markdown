@@ -8,7 +8,7 @@
 A results-oriented technical leader with proven success designing, developing, and deploying enterprise software systems
 ## Summary
 
-Proven abilities as a developer, leader, and mentor.  Produces high-quality deliverables through pragmatic, results-driven best practices.  Deep technical expertise with enterprise Java, object-oriented design, and software development processes.  History of improving the quality of every project, team, and deliverable by balancing business, user, and technical needs.  Has lead successful teams as an architect, technical lead, and department manager.
+Proven abilities as a developer, leader, and mentor.  Produces high-quality deliverables through pragmatic, results-driven best practices.  Deep technical expertise with enterprise Java, object-oriented design, and software development processes.  History of improving the quality of every project, team, and deliverable by balancing business, user, and technical needs.  Has led successful teams as an architect, technical lead, and department manager.
 ## Skills
 
 + **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, Ruby, PHP
@@ -23,14 +23,14 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 #### Senior Software Engineer (Contract)
 _4/2008 - 10/2008_
 
-_Description:_ Design and implement REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other 'Web 2.0' applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
+_Description:_ Produce a REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other Web 2.0 applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
 
 Key Achievements:
 
-+ Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased market-share, new products, and increased revenue
++ Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased marketshare and revenue by enabling new products to be created
 + Created MediaWiki plug-in for Gliffy's product for which they can sell support; opened additional revenue path for the company
 + Refactored JDBC/SQL-based data layer into O/R mapping layer using Java Persistence and Hibernate; reduced the maintenance and enhancement costs of Gliffy's flagship product
-+ Created a test-bed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
++ Created a testbed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
 
 ### Provident Analysis (Fairfax, VA)
 _4/2002 - 4/2008_
@@ -38,19 +38,19 @@ _4/2002 - 4/2008_
 #### Technical Lead
 _11/2007 - 4/2008_
 
-_Description:_ Create software architecture and design for enterprise systems at US Marshals Service (USMS).  Mentor new and junior members of staff.  Provide development procedures and tools.  Design and implement re-usable components for USMS key systems. Perform database design and refactoring.  Provide estimates and recommend staff assignment to project tasks.  Perform Java design and development.
+_Description:_ Create software architecture and design for enterprise systems at U.S. Marshals Service (USMS).  Mentor new and junior members of staff.  Provide development procedures and tools.  Design and implement reusable components for USMS key systems. Perform database design and refactoring.  Provide estimates and recommend staff assignment to project tasks.  Perform Java design and development.
 
 Key Achievements:
 
 + Established development procedures and best-practices; new team members were able to contribute working code within days of starting
 + Conducted code, design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
-+ Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
++ Provided estimates and project planning, working with USMS stakeholders to present a realistic, achievable development plan
 + Designed and implemented key use-cases for USMS prisoner tracking system
 
 #### Technical Architect
 _10/2006 - 10/2007_
 
-_Description:_ As part of Enterprise Architecture (EA) group, provide technical direction and leadership to both DOT Maritime Administration (MARAD) CIO as well as development staff.  Create, establish, and maintain system development lifecycle process and supporting artifact descriptions.  Create tactical plan for following year based on EA analysis.  Develop longer-term strategic plan.
+_Description:_ As part of Enterprise Architecture (EA) group, provide technical direction and leadership to both Department of Transportation (DOT) Maritime Administration (MARAD) CIO as well as development staff.  Create, establish, and maintain system development lifecycle process and supporting artifact descriptions.  Create tactical plan for following year based on EA analysis.  Develop long-term strategic plan.
 
 Key Achievements:
 
@@ -63,27 +63,27 @@ Key Achievements:
 #### Technical Lead/Architect
 _9/2005 - 10/2006_
 
-_Description:_ Create technical architecture and system design for unified data-driven application for US Marshals Service.   Perform process and policy analysis to gather requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Perform Java design and development.
+_Description:_ Create technical architecture and system design for unified data-driven application for USMS.   Analyze busines process and policy to create system requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Java design and development.
 
 Key Achievements:
 
 + Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE distributed architecture based on EJB, Hibernate, and Swing; provided a long-term viable and highly usable platform for business process integration
-+ Created user interface style guide and a Swing framework in support of it; allowed developers to easily create consistent user interfaces regardless of IDE
++ Created user interface style guide and supporting Swing framework; allowed developers to easily create consistent user interfaces regardless of IDE
 
 #### Senior Software Engineer
-_9/2005 - 4/2002_
+_4/2002 - 9/2005_
 
-_Description:_ Design and develop Java code for US Marshals Service case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
+_Description:_ Design and develop Java code for USMS case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
 
 Key Achievements:
 
 + Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
 + Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
-+ Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided many usability and workflow enhancements over legacy system and is used daily within the USMS
-+ Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source saved USMS significant cost in both licensing and maintenance
-+ Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Trainers could author content and users could train on a live version of the application
++ Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided usability and workflow enhancements over legacy system
++ Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source software saved USMS significant cost in both licensing and maintenance
++ Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Allow trainers to easily author and maintain content while users could train on live version of application
 
-### Publicis Dialog (formerly Novo/Ironlight) (San Francisco, CA)
+### Publicis Dialog (f/k/a Novo/Ironlight) (San Francisco, CA)
 _2/1998 - 2/2002_
 
 #### Software Engineering Director
@@ -93,10 +93,10 @@ _Description:_ Manage department of software engineers and HTML programmers.  Pa
 
 Key Achievements:
 
-+ Standardized development process and tools; developers could immediately start work on a new project without reinventing the wheel
++ Standardized development process and tools; developers could immediately start work on a new project and re-use existing code and tools
 + Created department intranet for knowledge sharing and documentation; by moving away from email-based knowledge transfer, on-boarding of new employees become very fast and the team was able to grow without significant problems
 + Ensured the successful delivery of numerous Java web projects as well as successful support of business development efforts
-+ Participated in organization-wide development process establishment; unifyied business procurement, design, and development into an iterative, repeatable process
++ Participated in organization-wide development process establishment; unified business procurement, design, and development into an iterative, repeatable process
 
 #### Software Engineer
 _2/1998 - 6/1999_
@@ -105,42 +105,42 @@ _Description:_ Perform software design and development for web-based systems.  C
 
 Key Achievements:
 
-+ As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS; significantly reduced the cost, while increased the fault-tolerance of, site updates
++ As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS; significantly reduced the cost of site updates and simplified development
 + Successfully coordinated a graphical redesign for Toyota.com, working with HTML programmers, off-site designers, and Toyota system engineers
-+ Lead development of averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
++ Lead development of Avery Dennison's averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
+
+### Evergreen Internet (Chandler, AZ)
+#### Software Engineer
+_5/1997 - 9/1997_
+
+_Description:_ Design and develop E-commerce system n C++. Develope enhancements to Perl-based E-commerce system.
+
+Key Achievements:
+
++ Designed shopping cart and shipping features for flagship E-Commerce system which allowed users to ship items to multiple locations
 
 ### Arizona State University (Tempe, AZ)
 #### Research Assistant
-_12/1997 - 9/1996_
+_9/1996 - 12/1997_
 
-_Description:_ Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research
+_Description:_ Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research.
 
 Key Achievements:
 
 + Designed and collected metrics for flight-control software engineering group
 + Performed analysis of metrics and reported findings to quality assurance team at Honeywell
 
-### Evergreen Internet (Chandler, AZ)
-#### Software Engineer
-_9/1997 - 5/1997_
-
-_Description:_ Design and develop C++-based E-commerce system.  Develope enhancements to Perl-based E-commerce system
-
-Key Achievements:
-
-+ Designed shopping cart and shipping features for flagship E-Commerce system which allowed users to ship items to multiple locations
-
 ### Recognition Research (Blacksburg, VA)
 #### Software Engineer
-_8/1996 - 6/1994_
+_6/1994 - 8/1996_
 
-_Description:_ Perform C and Perl-based design and coding for client work and internal tools.
+_Description:_ Perform design and coding for client work and internal tools using C and Perl.
 
 Key Achievements:
 
 + Successfully migrated configuration management system from RCS to CVS
 + Refactored and maintained a low-level image manipulation library in C
-+ Designed and created a build system for building company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
++ Designed and created a build system for compiling and packaging company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
 + Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
 
 

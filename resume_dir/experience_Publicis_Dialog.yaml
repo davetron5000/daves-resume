@@ -3,7 +3,7 @@ date_range: &id007 !ruby/object:DateRange
   end_date: 2002-02-01
   start_date: 1998-02-01
 location: San Francisco, CA
-name: Publicis Dialog (formerly Novo/Ironlight)
+name: Publicis Dialog (f/k/a Novo/Ironlight)
 positions: 
 - !ruby/object:Position 
   title: Software Engineering Director
@@ -13,7 +13,7 @@ positions:
     start_date: 1999-06-01
   achievements: 
   - !str
-    str: Standardized development process and tools; developers could immediately start work on a new project without reinventing the wheel
+    str: Standardized development process and tools; developers could immediately start work on a new project and re-use existing code and tools
     "@tags":
     - :process
     - :lead
@@ -33,7 +33,7 @@ positions:
     - :jsp
     - :servlets
   - !str
-    str: Participated in organization-wide development process establishment; unifyied business procurement, design, and development into an iterative, repeatable process
+    str: Participated in organization-wide development process establishment; unified business procurement, design, and development into an iterative, repeatable process
     "@tags":
     - :process
     - :lead
@@ -45,7 +45,7 @@ positions:
     start_date: 1998-02-01
   achievements: 
   - !str
-    str: As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS; significantly reduced the cost, while increased the fault-tolerance of, site updates
+    str: As technical lead for Toyota.com, migrated site from ad-hoc file-based management to version-controlled system based on CVS; significantly reduced the cost of site updates and simplified development
     "@tags":
     - :lead
     - :process
@@ -55,7 +55,7 @@ positions:
     "@tags":
     - :lead
   - !str
-    str: Lead development of averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
+    str: Lead development of Avery Dennison's averygraphics.com, successfully deployed international data-driven site and content management system, based on Apple's WebObjects platform.  Successfully transitioned the work to Avery's support team.
     "@tags":
     - :lead
     - :architect

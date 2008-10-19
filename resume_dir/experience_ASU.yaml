@@ -1,13 +1,13 @@
 --- !ruby/object:Job 
 date_range: &id011 !ruby/object:DateRange 
-  end_date: 1996-09-01
-  start_date: 1997-12-01
+  start_date: 1996-09-01
+  end_date: 1997-12-01
 location: Tempe, AZ
 name: Arizona State University
 positions: 
 - !ruby/object:Position 
   title: Research Assistant
-  description: Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research
+  description: Conduct software engineering process research at Honeywell to support both Honeywell quality assurance staff and my Master's thesis research.
   date_range: *id011
   achievements: 
   - !str

@@ -23,7 +23,7 @@ Basically, the resume is:
 
 * Core (in <tt>resume.yaml</tt>) - This has stuff like your name, address, summary, etc.
 * SkillSet (in <tt>skills.yaml</tt>) - This is a database of your skills, with an experience level and a # of years experience.  
-    * The acceted levels currently are:
+    * The accepted levels currently are:
         * :novice - skills show up in "Exposure To"
         * :intermediate - skills show up last in their category
         * :expert - skills show up first in their category

@@ -8,7 +8,7 @@ name: Provident Analysis
 positions: 
 - !ruby/object:Position 
   title: Technical Lead
-  description: Create software architecture and design for enterprise systems at US Marshals Service (USMS).  Mentor new and junior members of staff.  Provide development procedures and tools.  Design and implement re-usable components for USMS key systems. Perform database design and refactoring.  Provide estimates and recommend staff assignment to project tasks.  Perform Java design and development.
+  description: Create software architecture and design for enterprise systems at U.S. Marshals Service (USMS).  Mentor new and junior members of staff.  Provide development procedures and tools.  Design and implement reusable components for USMS key systems. Perform database design and refactoring.  Provide estimates and recommend staff assignment to project tasks.  Perform Java design and development.
   date_range: &id003 !ruby/object:DateRange 
     end_date: 2008-04-01
     start_date: 2007-11-01
@@ -28,7 +28,7 @@ positions:
     - :j2ee
     - :reviews
   - !str
-    str: Provided estimates and project planning, working with US Marshals Service stakeholders to present a realistic, achievable development plan
+    str: Provided estimates and project planning, working with USMS stakeholders to present a realistic, achievable development plan
     "@tags":
     - :lead
     - :pm
@@ -71,11 +71,11 @@ positions:
   date_range: &id004 !ruby/object:DateRange 
     end_date: 2007-10-01
     start_date: 2006-10-01
-  description: As part of Enterprise Architecture (EA) group, provide technical direction and leadership to both DOT Maritime Administration (MARAD) CIO as well as development staff.  Create, establish, and maintain system development lifecycle process and supporting artifact descriptions.  Create tactical plan for following year based on EA analysis.  Develop longer-term strategic plan.
+  description: As part of Enterprise Architecture (EA) group, provide technical direction and leadership to both Department of Transportation (DOT) Maritime Administration (MARAD) CIO as well as development staff.  Create, establish, and maintain system development lifecycle process and supporting artifact descriptions.  Create tactical plan for following year based on EA analysis.  Develop long-term strategic plan.
   title: Technical Architect
 - !ruby/object:Position 
   title: Technical Lead/Architect
-  description: Create technical architecture and system design for unified data-driven application for US Marshals Service.   Perform process and policy analysis to gather requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Perform Java design and development.
+  description: Create technical architecture and system design for unified data-driven application for USMS.   Analyze busines process and policy to create system requirements.  Perform user interface analysis and design.  Establish configuration management, development, and deployment procedures for project team.  Java design and development.
   achievements: 
   - !str
     str: Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE distributed architecture based on EJB, Hibernate, and Swing; provided a long-term viable and highly usable platform for business process integration
@@ -86,19 +86,15 @@ positions:
     - :hibernate
     - :swing
   - !str
-    str: Created user interface style guide and a Swing framework in support of it; allowed developers to easily create consistent user interfaces regardless of IDE
+    str: Created user interface style guide and supporting Swing framework; allowed developers to easily create consistent user interfaces regardless of IDE
     "@tags":
     - :ui
     - :architect
     - :swing
   - !str
-    str: Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies at an organization-wide level
+    str: Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies across the organization 
     "@tags":
     - :requirements
-  - !str
-    str: Gathered client feedback frequently during the development cycle; allowed team to refine and understand the requirements by presenting working code early in the process
-    "@tags":
-    - :process
   - !str
     str: Produced required SDLC documents for requirements, system design, and system maintenance
     "@tags":
@@ -108,23 +104,23 @@ positions:
     start_date: 2005-09-01
 - !ruby/object:Position 
   title: Senior Software Engineer
-  description: Design and develop Java code for US Marshals Service case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
+  description: Design and develop Java code for USMS case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
   achievements: 
   - !str
-    str: Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided many usability and workflow enhancements over legacy system and is used daily within the USMS
+    str: Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided usability and workflow enhancements over legacy system
     "@tags":
     - :developer
     - :j2ee
     - :swing
     - :ejb
   - !str
-    str: Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source saved USMS significant cost in both licensing and maintenance
+    str: Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source software saved USMS significant cost in both licensing and maintenance
     "@tags":
     - :developer
     - :jboss
     - :weblogic
   - !str
-    str: Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Trainers could author content and users could train on a live version of the application
+    str: Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Allow trainers to easily author and maintain content while users could train on live version of application
     "@tags":
     - :developer
     - :javahelp
@@ -140,7 +136,7 @@ positions:
     - :lead
     - :process
   - !str
-    str: Created prototype of mobile interface to a USMS criminal search system by re-using EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, keeping costs down for the government
+    str: Created prototype of mobile interface to USMS criminal search system by reusing EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, reducing costs
     "@tags":
     - :developer
     - :j2ee
@@ -149,5 +145,5 @@ positions:
     - :jsp
     - :minor
   date_range: &id006 !ruby/object:DateRange 
-    end_date: 2002-04-01
-    start_date: 2005-09-01
+    start_date: 2002-04-01
+    end_date: 2005-09-01

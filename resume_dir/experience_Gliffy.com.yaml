@@ -8,7 +8,7 @@ positions:
 - !ruby/object:Position 
   achievements: 
   - !str
-    str: Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased market-share, new products, and increased revenue
+    str: Designed a REST-based web service API for integrating Gliffy into any web-enabled software; supports increased marketshare and revenue by enabling new products to be created
     "@tags":
     - :web_services
     - :rest
@@ -30,12 +30,12 @@ positions:
     - :developer
     - :major
   - !str
-    str: Created a test-bed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
+    str: Created a testbed for Gliffy's flash-based application and Developer API; made refactoring simpler and reduced the cost of maintenance.
     "@tags":
     - :testing
     - :qa
     - :developer
     - :major
   date_range: *id001
-  description: Design and implement REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other 'Web 2.0' applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
+  description: Produce a REST-based developer API in Java/J2EE and PHP for integrating flagship product (a diagramming tool) into other Web 2.0 applications.  Advise on technical architecture and deployment issues.  Provide developer documentation and other support materials.  Additional Java software design and development.
   title: Senior Software Engineer (Contract)
