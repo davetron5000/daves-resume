@@ -1,7 +1,6 @@
 RESUME_YAML = 'resume_dir'
-RESUME_RTF = "resume.rtf"
-RESUME_MARKDOWN = "resume.markdown"
-RESUME_HTML = "resume.html"
+RESUME_BASE = 'resume'
+
 #PRIMARY_TAG = :developer
 #ALT_TAG = :architect
 #CORE_TO_USE = "developer"

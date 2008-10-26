@@ -5,8 +5,6 @@ $: << "conf"
 require 'rake/clean'
 require 'rake/rdoctask'
 require "resume"
-require "format/markdown"
-require "format/richtext"
 require "serializer"
 require "conf"
 require "erb"
@@ -14,9 +12,6 @@ include Resume
 
 SCAFFOLD_DIR = "scaffold"
 
-CLEAN.include RESUME_MARKDOWN
-CLEAN.include RESUME_HTML
-CLEAN.include RESUME_RTF
 CLOBBER.include SCAFFOLD_DIR
 
 Rake::RDocTask.new do |rd|
@@ -36,55 +31,33 @@ def configure_formatter(formatter)
     formatter.achievement_filter = ACHIEVEMENT_FILTER
 end
 
-task :rtf => :read_resume do |t|
+def format(type,resume,file_to_make_copy=nil)
     template = ""
-    File.open("templates/RTF.erb") do |input|
+    File.open("templates/#{type}.erb") do |input|
         input.readlines.each() do |line|
             template += line
         end
     end
-    rtf_template = ERB.new(template)
-    rtf = rtf_template.result(resume.get_binding)
-    File.open(RESUME_RTF,'w') do |file|
-        file.puts rtf
+    type_template = ERB.new(template)
+    type_data = type_template.result(resume.get_binding)
+    file_name = RESUME_BASE + "." + type.downcase
+    File.open(RESUME_BASE + "." + type.downcase,'w') do |file|
+        file.puts type_data
     end
+    cp(file_name,file_to_make_copy) if file_to_make_copy
+    file_name
+end
+
+task :rtf => :read_resume do |t|
+    format("RTF",resume,"Resume_of_David_Copeland.doc")
 end
 
 task :web => :read_resume do |t|
-    template = ""
-    File.open("templates/HTML.erb") do |input|
-        input.readlines.each() do |line|
-            template += line
-        end
-    end
-    markdown_template = ERB.new(template)
-    markdown = markdown_template.result(resume.get_binding)
-    File.open(RESUME_HTML,'w') do |file|
-        file.puts markdown
-    end
+    format("HTML",resume)
 end
 
 task :markdown => :read_resume do |t|
-    template = ""
-    File.open("templates/Markdown.erb") do |input|
-        input.readlines.each() do |line|
-            template += line
-        end
-    end
-    markdown_template = ERB.new(template)
-    markdown = markdown_template.result(resume.get_binding)
-    File.open(RESUME_MARKDOWN,'w') do |file|
-        file.puts markdown
-    end
-end
-
-desc "Updates the README.markdown for GitHub with my resume"
-task :readme => :markdown do |t|
-    cp(RESUME_MARKDOWN, "README.markdown")
-end
-
-task :word => :rtf do |t|
-    cp(RESUME_RTF,"Resume_of_David_Copeland.doc")
+    format("Markdown",resume,"README.markdown")
 end
 
 desc "Blows away and creates #{SCAFFOLD_DIR}, containg sample YAML for your resume"
@@ -96,4 +69,4 @@ task :scaffold do |t|
     serializer.store(SCAFFOLD_DIR,resume)
     puts "Rename #{SCAFFOLD_DIR}/ to the directory of your choice, then edit your resume"
 end
-task :default => [:word, :readme]
+task :default => [:rtf, :web, :markdown]
