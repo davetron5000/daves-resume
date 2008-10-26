@@ -27,10 +27,6 @@ task :read_resume do |t|
     resume = serializer.load(RESUME_YAML)
 end
 
-def configure_formatter(formatter)
-    formatter.achievement_filter = ACHIEVEMENT_FILTER
-end
-
 def format(type,resume,file_to_make_copy=nil)
     template = ""
     File.open("templates/#{type}.erb") do |input|
