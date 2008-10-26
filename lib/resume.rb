@@ -129,12 +129,35 @@ class SkillSet
 
     def SkillSet.category_order; @@category_order; end
     def SkillSet.categories; @@categories; end
+    # Returns the labels for the categories in order
+    def SkillSet.category_labels_order
+        labels = Array.new
+        @@category_order.each() { |c| labels << @@categories[c] }
+        labels
+    end
 
     # Hash of category to skill objects
     attr_accessor :skills
 
     def initialize
         @skills = Hash.new
+    end
+
+    def all_novice_skills
+        novice_skills = Array.new
+        skills.each() do |k,v|
+            novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
+        end
+        novice_skills
+    end
+
+    # Returns a map of skill categories to arrays of skills
+    def non_novice_skills_by_category
+        non_novice = Hash.new
+        SkillSet.category_order.each() do |category|
+            non_novice[SkillSet.categories[category]] = skills[category].select() { |x| x.experience_level != :novice }.sort().reverse()
+        end
+        non_novice
     end
 
     def SkillSet.scaffold

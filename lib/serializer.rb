@@ -45,6 +45,10 @@ class Serializer
         resume.education = read(dir,education_prefix)
         resume.references = read(dir,references_prefix)
         resume.samples = read(dir,samples_prefix)
+        resume.experience.sort!.reverse!
+        resume.education.sort!.reverse!
+        resume.samples.sort!.reverse!
+        resume.experience.each() { |xp| xp.positions.sort!.reverse! }
         return resume
     end
 

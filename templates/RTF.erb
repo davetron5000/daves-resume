@@ -58,31 +58,27 @@ Skills
 {\pard
  
 \par}
-<%
-novice_skills = Array.new
-skills.skills.each() do |k,v|
-    novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
-end
+<% 
+non_novice_skills = @skills.non_novice_skills_by_category
+SkillSet.category_labels_order.each() do |category|
+    these_skills = non_novice_skills[category] 
 %>
-<% SkillSet.category_order.each() do |category|
-      label = SkillSet.categories[category]
-      these_skills = @skills.skills[category] %>
 \trowd\tgraph100
 \cellx1440
 \cellx8640
 \pard\intbl
 {\b\fs18
-<%= label %>
+<%= category %>
 }
 \cell
 \pard\intbl
 {\fs18
-<%= these_skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ") %>
+<%= these_skills.join(", ") %>
 }
 \cell
 \row
 <% end %>
-<% if (!novice_skills.empty?) %>
+<% if (!@skills.all_novice_skills.empty?) %>
 \trowd\tgraph100
 \cellx1440
 \cellx8640
@@ -93,7 +89,7 @@ Exposure to:
 \cell
 \pard\intbl
 {\fs18
-<%= novice_skills.join(", ") %>
+<%= @skills.all_novice_skills.join(", ") %>
 }
 \cell
 \row
@@ -110,7 +106,7 @@ Experience
  
 \par}
 
-<% @experience.sort().reverse().each() do |job| %>
+<% @experience.each() do |job| %>
 {\pard\ql\li-180
 {\b\fs24
 <%= job.name %>
@@ -119,7 +115,7 @@ Experience
 {\pard\ql\li-180
 <%= job.location %> - <%= job.date_range.to_s %>
 \par}
-<% job.positions.sort().reverse().each() do |position| %>
+<% job.positions.each() do |position| %>
 {\pard\fs22
 {\ul
 <%= position.title %>	<%= position.date_range.to_s %>
@@ -171,7 +167,7 @@ Education
 {\pard
  
 \par}
-<% @education.sort().reverse().each() do |school| %>
+<% @education.each() do |school| %>
 {\pard\b\fs24
 <%= school.name %> - <%= school.degree %>, <%= school.major %>, <%= school.year_graduated %>
 \par}

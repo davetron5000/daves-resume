@@ -20,25 +20,22 @@
 <%= @core.summary %>
 </p>
 <h2>Skills</h2>
-<%
-novice_skills = Array.new
-skills.skills.each() do |k,v|
-    novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
-end
-%>
 <table>
-<% SkillSet.category_order.each() do |category|
-      label = SkillSet.categories[category]
-      these_skills = @skills.skills[category] %>
-<tr><td><b><%= label %></b></td><td><%= these_skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ") %></td></tr><% end %>
-<% if (!novice_skills.empty?) %><tr><td><i>Some experience with</i></td><td><%= novice_skills.join(", ") %></td></tr><% end %>
+<% 
+non_novice_skills = @skills.non_novice_skills_by_category
+SkillSet.category_labels_order.each() do |category|
+    these_skills = non_novice_skills[category] 
+%>
+<tr><td><b><%= category %></b></td><td><%= these_skills.join(", ") %></td></tr><% end %>
+<% if (!@skills.all_novice_skills.empty?) %><tr><td><i>Some experience with</i></td>
+<td><%= @skills.all_novice_skills.join(", ") %></td></tr><% end %>
 </table>
 
 <h2>Experience</h2>
 
-<% @experience.sort().reverse().each() do |job| %>
+<% @experience.each() do |job| %>
 <h3><%= job.name %>(<%= job.location %>) <%= (!job.positions || job.positions.size != 1) ? "<i>#{job.date_range.to_s}</i>" : '' %></h3>
-    <% job.positions.sort().reverse().each() do |position| %>
+    <% job.positions.each() do |position| %>
 <h4><%= position.title %></h4>
 <i><%= position.date_range.to_s %></i>
 <p>
@@ -56,7 +53,7 @@ Key Achievements:
 <% end %>
 
 <h2>Education</h2>
-<% @education.sort().reverse().each() do |school| %>
+<% @education.each() do |school| %>
 <h3><%= school.name %> - <%= school.degree %>, <%= school.major %>, <%= school.year_graduated %></h3>
     <% if school.other_info %>
 <p><%= school.other_info %></p>
