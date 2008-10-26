@@ -25,9 +25,9 @@ end
 
 ## Experience
 
-<% @experience.sort() { |a,b| b.date_range <=> a.date_range}.each() do |job| %>
+<% @experience.sort().reverse().each() do |job| %>
 ### <%= job.name %>(<%= job.location %>) <%= (!job.positions || job.positions.size != 1) ? "_#{job.date_range.to_s}_" : '' %>
-    <% job.positions.each() do |position| %>
+    <% job.positions.sort().reverse().each() do |position| %>
 #### <%= position.title %>
 _<%= position.date_range.to_s %>_
 
@@ -40,7 +40,7 @@ Key Achievements:
 <% end %>
 
 ## Education
-<% @education.sort() { |a,b| b.year_graduated <=> a.year_graduated }.each() do |school| %>
+<% @education.sort().reverse().each() do |school| %>
 ### <%= school.name %> - <%= school.degree %>, <%= school.major %>, <%= school.year_graduated %>
     <% if school.other_info %>
 <%= school.other_info %>

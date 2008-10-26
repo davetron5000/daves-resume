@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Resume of <%= @core.contact_info.name %></title>
+</head>
+<body>
+<h1><%= @core.contact_info.name %></h1>
+
+<ul>
+<li><b>Address:</b> <%= @core.contact_info.address.city %>, <%= @core.contact_info.address.state %> <%= @core.contact_info.address.zip %>
+<li><b>Phone:</b> <%= @core.contact_info.phone %>
+<li><b>Email:</b> <%= @core.contact_info.safe_email %>
+</ul>
+<hr>
+<p style="font-size: 110%; font-weight: bold">
+<%= @core.headline %>
+</p>
+
+<h2>Summary</h2>
+<p style="font-style:italic">
+<%= @core.summary %>
+</p>
+<h2>Skills</h2>
+<%
+novice_skills = Array.new
+skills.skills.each() do |k,v|
+    novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
+end
+%>
+<table>
+<% SkillSet.category_order.each() do |category|
+      label = SkillSet.categories[category]
+      these_skills = @skills.skills[category] %>
+<tr><td><b><%= label %></b></td><td><%= these_skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ") %></td></tr><% end %>
+<% if (!novice_skills.empty?) %><tr><td><i>Some experience with</i></td><td><%= novice_skills.join(", ") %></td></tr><% end %>
+</table>
+
+<h2>Experience</h2>
+
+<% @experience.sort().reverse().each() do |job| %>
+<h3><%= job.name %>(<%= job.location %>) <%= (!job.positions || job.positions.size != 1) ? "<i>#{job.date_range.to_s}</i>" : '' %></h3>
+    <% job.positions.sort().reverse().each() do |position| %>
+<h4><%= position.title %></h4>
+<i><%= position.date_range.to_s %></i>
+<p>
+<b>Description:</b><%= position.description %>
+</p>
+<p>
+Key Achievements:
+<ul>
+        <% position.achievements.each() do |achievement| %>
+<li><%= achievement %></li>
+        <% end %>
+</ul>
+</p>
+    <% end %>
+<% end %>
+
+<h2>Education</h2>
+<% @education.sort().reverse().each() do |school| %>
+<h3><%= school.name %> - <%= school.degree %>, <%= school.major %>, <%= school.year_graduated %></h3>
+    <% if school.other_info %>
+<p><%= school.other_info %></p>
+    <% end %><% end %>
+<% if @samples && !@samples.empty? %>
+<h2>Samples</h2>
+<ul>
+<% @samples.each() do |sample| %>
+<li><a href="<%= sample.url %>"><%= sample.name %></a></li>
+<% end %>
+<% end %>
+</ul>
+</body>
+</html>

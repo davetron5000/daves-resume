@@ -218,6 +218,11 @@ class Education
         ed.other_info = "Thesis: Basketweaving simplified"
         ed
     end
+
+    def <=>(other_education)
+        return 1 if !other_education
+        return year_graduated <=> other_education.year_graduated
+    end
 end
 
 # Contact information, such as name, email, address
@@ -284,6 +289,12 @@ class Job
         job.positions << Position.scaffold("Copy Boy",year)
         job
     end
+
+    def <=>(other_position)
+        return 1 if !other_position
+        return 1 if !other_position.date_range
+        return date_range <=> other_position.date_range
+    end
 end
 
 # 
@@ -317,6 +328,12 @@ class Position
         position.achievements[1].tags = Array.new
         position.achievements[1].tags << :architect
         position
+    end
+    
+    def <=>(other_position)
+        return 1 if !other_position
+        return 1 if !other_position.date_range
+        return date_range <=> other_position.date_range
     end
 end
 

@@ -15,6 +15,7 @@ include Resume
 SCAFFOLD_DIR = "scaffold"
 
 CLEAN.include RESUME_MARKDOWN
+CLEAN.include RESUME_HTML
 CLEAN.include RESUME_RTF
 CLOBBER.include SCAFFOLD_DIR
 
@@ -36,9 +37,31 @@ def configure_formatter(formatter)
 end
 
 task :rtf => :read_resume do |t|
-    formatter = Format::RTFFormat.new(resume)
-    configure_formatter formatter
-    formatter.to_file(RESUME_RTF)
+    template = ""
+    File.open("templates/RTF.erb") do |input|
+        input.readlines.each() do |line|
+            template += line
+        end
+    end
+    rtf_template = ERB.new(template)
+    rtf = rtf_template.result(resume.get_binding)
+    File.open(RESUME_RTF,'w') do |file|
+        file.puts rtf
+    end
+end
+
+task :web => :read_resume do |t|
+    template = ""
+    File.open("templates/HTML.erb") do |input|
+        input.readlines.each() do |line|
+            template += line
+        end
+    end
+    markdown_template = ERB.new(template)
+    markdown = markdown_template.result(resume.get_binding)
+    File.open(RESUME_HTML,'w') do |file|
+        file.puts markdown
+    end
 end
 
 task :markdown => :read_resume do |t|
