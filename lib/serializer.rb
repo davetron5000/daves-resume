@@ -2,6 +2,7 @@ require 'yaml'
 require 'resume'
 require 'fileutils'
 include FileUtils
+module Resume
 # Serializes a resume to/from YAML
 class Serializer
 
@@ -28,7 +29,7 @@ class Serializer
             raise "#{dir} doesn't exist"
         end
 
-        resume = Resume::Resume.new
+        resume = Resume.new
         cores = read(dir,core_prefix)
         if (cores.size > 1)
             if (core_to_use)
@@ -91,4 +92,5 @@ class Serializer
             end
         end
     end
+end
 end
