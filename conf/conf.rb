@@ -1,9 +1,14 @@
 RESUME_YAML = 'resume_dir'
 RESUME_RTF = "resume.rtf"
 RESUME_MARKDOWN = "resume.markdown"
-ACHIEVEMENT_TAGS = [ :lead, :pm, :architect ]
+#PRIMARY_TAG = :developer
+#ALT_TAG = :architect
+#CORE_TO_USE = "developer"
+PRIMARY_TAG = :architect
+ALT_TAG = :developer
+CORE_TO_USE = "techlead"
+ACHIEVEMENT_TAGS = [ :lead, :pm, PRIMARY_TAG ]
 INCLUDE_UNTAGGED_ACHIEVEMENTS = true
-
 # Try to have at least this many
 MIN_ACHIEVEMENTS = 3
 # If more than this, try to trim some
@@ -23,7 +28,7 @@ ACHIEVEMENT_FILTER = Proc.new do |achievements|
             INCLUDE_UNTAGGED_ACHIEVEMENTS
         else
             a.tags.each() { |t| counts[t] = counts[t] ? counts[t] += 1 : 1 }
-            developer_not_architect << a if (!a.tags.include? :architect) && (a.tags.include? :developer)
+            developer_not_architect << a if (!a.tags.include? PRIMARY_TAG) && (a.tags.include? ALT_TAG)
             if (a.tags.include? :major)
                 true
             else
@@ -31,7 +36,7 @@ ACHIEVEMENT_FILTER = Proc.new do |achievements|
             end
         end
     end
-    if !counts[:architect]
+    if !counts[PRIMARY_TAG]
         filtered = filtered | developer_not_architect
     end
     if filtered.size < MIN_ACHIEVEMENTS

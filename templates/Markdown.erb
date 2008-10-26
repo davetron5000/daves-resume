@@ -1,0 +1,53 @@
+# <%= @core.contact_info.name %>
+
++ **Address:** <%= @core.contact_info.address.city %>, <%= @core.contact_info.address.state %> <%= @core.contact_info.address.zip %>
++ **Phone:** <%= @core.contact_info.phone %>
++ **Email:** <%= @core.contact_info.safe_email %>
+
+* * *
+**<%= @core.headline %>**
+## Summary
+
+<%= @core.summary %>
+## Skills
+<%
+novice_skills = Array.new
+skills.skills.each() do |k,v|
+    novice_skills = novice_skills | v.select() { |x| x.experience_level == :novice }.sort().reverse()
+end
+%>
+
+<% SkillSet.category_order.each() do |category|
+      label = SkillSet.categories[category]
+      these_skills = @skills.skills[category] %>
++ **<%= label %>**: <%= these_skills.select() { |x| x.experience_level != :novice }.sort().reverse().join(", ") %><% end %>
+<% if (!novice_skills.empty?) %>+ *Some experience with*: <%= novice_skills.join(", ") %><% end %>
+
+## Experience
+
+<% @experience.sort() { |a,b| b.date_range <=> a.date_range}.each() do |job| %>
+### <%= job.name %>(<%= job.location %>) <%= (!job.positions || job.positions.size != 1) ? "_#{job.date_range.to_s}_" : '' %>
+    <% job.positions.each() do |position| %>
+#### <%= position.title %>
+_<%= position.date_range.to_s %>_
+
+_Description:_ <%= position.description %>
+
+Key Achievements:
+        <% position.achievements.each() do |achievement| %>
++ <%= achievement %><% end %>
+    <% end %>
+<% end %>
+
+## Education
+<% @education.sort() { |a,b| b.year_graduated <=> a.year_graduated }.each() do |school| %>
+### <%= school.name %> - <%= school.degree %>, <%= school.major %>, <%= school.year_graduated %>
+    <% if school.other_info %>
+<%= school.other_info %>
+    <% end %><% end %>
+
+<% if @samples && !@samples.empty? %>
+## Samples
+<% @samples.each() do |sample| %>
+* [<%= sample.name %>](<%= sample.url %>)<% end %>
+<% end %>

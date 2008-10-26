@@ -1,4 +1,5 @@
 --- !ruby/object:ResumeCore 
+name: techlead
 contact_info: !ruby/object:ContactInfo 
   address: !ruby/object:Address 
     city: Washington

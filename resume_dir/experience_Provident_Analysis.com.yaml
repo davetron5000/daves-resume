@@ -86,11 +86,16 @@ positions:
     - :hibernate
     - :swing
   - !str
+    str: Designed and implemented above-mentioned system using rapid development techniques to gather user feedback on usability and workflow.
+    "@tags":
+    - :developer
+  - !str
     str: Created user interface style guide and supporting Swing framework; allowed developers to easily create consistent user interfaces regardless of IDE
     "@tags":
     - :ui
     - :architect
     - :swing
+    - :developer
   - !str
     str: Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies across the organization 
     "@tags":
@@ -104,7 +109,7 @@ positions:
     start_date: 2005-09-01
 - !ruby/object:Position 
   title: Senior Software Engineer
-  description: Design and develop Java code for USMS case management and analysis system.  Participate in requirements gathering.  Provide estimates and support project planning.
+  description: Design and develop Java code for government systems.  Participate in requirements gathering.  Provide estimates and support project planning.
   achievements: 
   - !str
     str: Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided usability and workflow enhancements over legacy system
@@ -113,6 +118,15 @@ positions:
     - :j2ee
     - :swing
     - :ejb
+  - !str
+    str: Established architecture, design and initial working version of Visa management system for Department of State using Java, J2EE, Swing, Oracle and Weblogic
+    "@tags":
+    - :developer
+    - :swing
+    - :j2ee
+    - :ejb
+    - :architect
+    - :lead
   - !str
     str: Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source software saved USMS significant cost in both licensing and maintenance
     "@tags":

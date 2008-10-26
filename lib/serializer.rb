@@ -5,23 +5,50 @@ include FileUtils
 # Serializes a resume to/from YAML
 class Serializer
 
+    attr_accessor :experience_prefix
+    attr_accessor :education_prefix
+    attr_accessor :references_prefix
+    attr_accessor :samples_prefix
+    attr_accessor :core_prefix
+    attr_accessor :skills_prefix
+    attr_accessor :core_to_use
+
+    def initialize
+        @experience_prefix='experience'
+        @education_prefix='education'
+        @references_prefix='references'
+        @samples_prefix='samples'
+        @core_prefix='resume'
+        @skills_prefix='skills'
+    end
+
     # Loads the resume artifacts from the given directory
-    def Serializer.load(dir)
+    def load(dir)
         if (!File.exists?(dir))
             raise "#{dir} doesn't exist"
         end
 
         resume = Resume::Resume.new
-        resume.core = File.open( "#{dir}/resume.yaml" ) { |yf| YAML::load( yf ) } if File.exists?("#{dir}/resume.yaml")
-        resume.skills = File.open( "#{dir}/skills.yaml" ) { |yf| YAML::load( yf ) } if File.exists?("#{dir}/skills.yaml")
-        resume.experience = read(dir,"experience");
-        resume.education = read(dir,"education");
-        resume.references = read(dir,"references");
-        resume.samples = read(dir,"samples");
+        cores = read(dir,core_prefix)
+        if (cores.size > 1)
+            if (core_to_use)
+                cores.each() { |core| resume.core = core if core.name == core_to_use }
+            else
+                raise "You must specify a core resume to use since there are #{cores.size} of them"
+            end
+        else
+            resume.core = cores[0]
+        end
+        raise "#{core_to_use} didn't match any resumes" if !resume.core
+        resume.skills = File.open( "#{dir}/#{skills_prefix}.yaml" ) { |yf| YAML::load( yf ) } if File.exists?("#{dir}/#{skills_prefix}.yaml")
+        resume.experience = read(dir,experience_prefix)
+        resume.education = read(dir,education_prefix)
+        resume.references = read(dir,references_prefix)
+        resume.samples = read(dir,samples_prefix)
         return resume
     end
 
-    def Serializer.read(dir,base_name)
+    def read(dir,base_name)
         list = Array.new
         Dir.glob("#{dir}/#{base_name}_*.yaml") do |file|
             list << File.open( file ) { |yf| YAML::load( yf ) }
@@ -30,7 +57,7 @@ class Serializer
     end
 
     # Stores the resume artifacts to the given directory.
-    def Serializer.store(dir,resume)
+    def store(dir,resume)
         if File.exists?(dir)
             rm(Dir.glob("#{dir}/*.yaml"))
         else
@@ -44,7 +71,7 @@ class Serializer
         File.open("#{dir}/skills.yaml",'w') { |out| YAML::dump(resume.skills,out) }
     end
 
-    def Serializer.dump(dir,base_name,items)
+    def dump(dir,base_name,items)
         if (items && !items.empty?)
             count = 1
             items.each() do |item|

@@ -10,6 +10,8 @@ class ResumeCore
     attr_accessor :headline
     # Summary of qualifications (String)
     attr_accessor :summary
+    # The name of this resume core, for conditional creation
+    attr_accessor :name
 
     def ResumeCore.scaffold
         core = ResumeCore.new
@@ -40,6 +42,10 @@ class Resume
         @references = Array.new
         @education = Array.new
         @experience = Array.new
+    end
+
+    def get_binding
+        binding
     end
 
     def Resume.scaffold

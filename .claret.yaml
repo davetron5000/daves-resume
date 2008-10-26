@@ -1,0 +1,55 @@
+--- !ruby/object:Claret::Project 
+items: 
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 1
+  name: Better conditional generation for headline and summary
+- &id001 !ruby/object:Claret::Task 
+  contributes_to: 
+  - &id002 !ruby/object:Claret::Task 
+    contributes_to: []
+
+    dependents: 
+    - *id001
+    id: 3
+    name: GEM packaging
+  dependents: []
+
+  id: 2
+  name: Command Line interface
+- *id002
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 4
+  name: don't hardcode the skill categories
+- &id005 !ruby/object:Claret::Task 
+  contributes_to: 
+  - &id003 !ruby/object:Claret::Milestone 
+    dependents: 
+    - *id005
+    - &id006 !ruby/object:Claret::Task 
+      contributes_to: 
+      - *id003
+      dependents: []
+
+      id: 8
+      name: Use ERB for RTF
+    estimated_achieve_date: 
+    id: 9
+    name: Using ERB instead of custom code for formatting
+  dependents: []
+
+  finish_date: &id004 2008-10-26 14:59:14.255221 -04:00
+  id: 7
+  name: Use ERB for Markdown
+  start_date: *id004
+- *id006
+- *id003
+name: Dave's Resume
+next_id: 10

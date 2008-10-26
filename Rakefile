@@ -9,6 +9,7 @@ require "format/markdown"
 require "format/richtext"
 require "serializer"
 require "conf"
+require "erb"
 include Resume
 
 SCAFFOLD_DIR = "scaffold"
@@ -23,9 +24,11 @@ Rake::RDocTask.new do |rd|
 end
 
 resume = nil
+serializer = Serializer.new
+serializer.core_to_use=CORE_TO_USE
 
 task :read_resume do |t|
-    resume = Serializer.load(RESUME_YAML)
+    resume = serializer.load(RESUME_YAML)
 end
 
 def configure_formatter(formatter)
@@ -39,9 +42,17 @@ task :rtf => :read_resume do |t|
 end
 
 task :markdown => :read_resume do |t|
-    formatter = Format::MarkdownFormat.new(resume)
-    configure_formatter formatter
-    formatter.to_file(RESUME_MARKDOWN)
+    template = ""
+    File.open("templates/Markdown.erb") do |input|
+        input.readlines.each() do |line|
+            template += line
+        end
+    end
+    markdown_template = ERB.new(template)
+    markdown = markdown_template.result(resume.get_binding)
+    File.open(RESUME_MARKDOWN,'w') do |file|
+        file.puts markdown
+    end
 end
 
 desc "Updates the README.markdown for GitHub with my resume"
@@ -59,7 +70,7 @@ task :scaffold do |t|
     rm_rf SCAFFOLD_DIR
     mkdir SCAFFOLD_DIR
     resume = Resume::Resume.scaffold
-    Serializer.store(SCAFFOLD_DIR,resume)
+    serializer.store(SCAFFOLD_DIR,resume)
     puts "Rename #{SCAFFOLD_DIR}/ to the directory of your choice, then edit your resume"
 end
 task :default => [:word, :readme]
