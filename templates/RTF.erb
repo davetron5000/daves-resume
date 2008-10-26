@@ -73,7 +73,7 @@ SkillSet.category_labels_order.each() do |category|
 \cell
 \pard\intbl
 {\fs18
-<%= these_skills.join(", ") %>
+<%= these_skills.collect() { |item| item = item.experience_level == :expert ? "\\b #{item.to_s} \\plain\\fs18" : item}.join(", ") %>
 }
 \cell
 \row

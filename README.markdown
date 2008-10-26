@@ -12,13 +12,12 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 ## Skills
 
 
-
 + **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, Ruby, PHP
 + **APIs**: J2EE/JavaEE, Servlets, JDBC, EJB (v2 and 3), Swing, Java Persistence, Hibernate, JavaHelp, JSP, JUnit, TestNG, HTTP/REST, JMS, JAXB
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin, Oracle
++ *Some experience with*: Oracle, OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin
 
 ## Experience
 
@@ -174,6 +173,6 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 
 ## Samples
 
-* [Adventure (C++)](http://naildrivin5.com/adventure/)
 * [RestUnit (in progress)](http://github.com/davetron5000/restunit/tree/master)
+* [Adventure (C++)](http://naildrivin5.com/adventure/)
 
