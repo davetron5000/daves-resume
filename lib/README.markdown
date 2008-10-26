@@ -36,7 +36,7 @@ Basically, the resume is:
         * :databases
         * :operating_systems
 * Experience - any file that starts with <tt>experience_</tt> and ends in <tt>.yaml</tt> will get picked up.  The formatter will sort things in reverse chronological order for you.  A Job consists of one or more positions, and the formatter should be smart about handling jobs with only one position.
-  * Acheivements can be tagged and you can use these tags to control your output
+  * Acheivements can be tagged and you can use these tags to control your output (theoretically)
   * <tt>conf/conf.rb</tt> has an example; you create a <tt>Proc</tt> that receives the list of achievements for a particular job. This proc must evaulate to the list you want to be rendered.  <tt>ext/string_tags.rb</tt> adds a <tt>tags</tt> method to the String class, so you can access the tags of your key achievements and do whatever filtering you want (or none).
 * Education - works like Experience files starting with <tt>education</tt> will get picked up and sorted reverse chronologically
 * Samples - this is just a name and a link, and only shows up in the Markdown version.
@@ -46,9 +46,15 @@ Basically, the resume is:
 
 The output is done using ERB templates, so you can edit the files in <tt>templates/</tt> to change how things work.  I wouldn't recommend messing with the RTF unless you know what you are doing.  You can also create new formats if you like.  Just be sure to name the template with a +.erb+ extension.  Supposed you wanted to create a LaTeX version.  Create <tt>templates/TEX.erb</tt> with whatever you need in it (see the other templates for examples), and then <tt>format TEX *yaml_location* resume</tt> and <tt>resume.tex</tt> will be generated.
 
+# Maintaining two Resumes
+
+Perhaps you want to slightly tweak your resume depending on the position you are going for.  In my resume, I have two "resume cores", which are described in files named <tt>resume_*.yaml</tt>.  These allow you to change the headline and summary.  When you invoke <tt>format</tt>, an optional fourth argument is the name of the core you would like to use (you must specify this if you have more than one).
+
+You can combine this with the achievement tagging and filtering (TBD) to control what shows up on your various resumes
+
 # TODO
 
-* Don't hard-code the categories
-* Possibly a section for awards/certifications
-* Maybe some test cases?
-
+* Better conditional generation for headline and summary
+* GEM packaging
+* don't hardcode the skill categories
+* Restore the achievement filtering stuff

@@ -55,5 +55,12 @@ items:
   start_date: *id006
 - *id008
 - *id005
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 10
+  name: Restore the achievement filtering stuff
 name: Dave's Resume
-next_id: 10
+next_id: 11
