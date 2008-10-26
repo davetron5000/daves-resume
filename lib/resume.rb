@@ -1,4 +1,3 @@
-require 'date'
 require 'string_tags.rb'
 
 module Resume
@@ -170,7 +169,6 @@ class SkillSet
         }
         set = SkillSet.new
         @@category_order.each() do |c|
-            puts "Skill for #{c}"
             set.skills[c] = Array.new
             set.skills[c] << Skill.scaffold(rand_skills[c])
         end
@@ -303,13 +301,10 @@ class Job
     def Job.scaffold
         job = Job.new
         job.name = "Initech"
-        job.date_range = DateRange.new
-        year = 2000 + rand(3)
-        job.date_range.start_date = Date.civil(year,01,01)
-        job.date_range.end_date = Date.civil(year + 2,01,01)
+        job.date_range = DateRange.scaffold(2000,2003)
         job.location = "San Francisco, CA"
-        job.positions << Position.scaffold("Lead Copy Boy",year+1)
-        job.positions << Position.scaffold("Copy Boy",year)
+        job.positions << Position.scaffold("Lead Copy Boy",2001)
+        job.positions << Position.scaffold("Copy Boy",2000)
         job
     end
 
@@ -339,9 +334,9 @@ class Position
     def Position.scaffold(name,year)
         position = Position.new
         position.title = name
-        position.date_range = DateRange.new
-        position.date_range.start_date = Date.civil(year,01,01);
-        position.date_range.end_date = Date.civil(year,12,01);
+        #position.date_range = DateRange.new
+        #position.date_range.start_date = Date.civil(year,01,01);
+        #position.date_range.end_date = Date.civil(year,12,01);
         position.description = "Enter in a description of the position you held"
         position.achievements << "Enter your most important achievements first"
         position.achievements << "Follow with additional ones, making sure to indicate the result of your actions"
@@ -363,6 +358,13 @@ end
 class DateRange
     attr_accessor :start_date
     attr_accessor :end_date
+
+    def DateRange.scaffold(year1,year2)
+        range = DateRange.new
+        range.start_date=Date.ordinal(year1,1)
+        range.end_date=Date.ordinal(year2,1)
+        range
+    end
 
     def <=>(other_range)
         return @start_date <=> other_range.start_date
