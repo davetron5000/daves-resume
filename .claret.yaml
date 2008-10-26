@@ -7,20 +7,22 @@ items:
 
   id: 1
   name: Better conditional generation for headline and summary
-- &id001 !ruby/object:Claret::Task 
+- &id002 !ruby/object:Claret::Task 
   contributes_to: 
-  - &id002 !ruby/object:Claret::Task 
+  - &id003 !ruby/object:Claret::Task 
     contributes_to: []
 
     dependents: 
-    - *id001
+    - *id002
     id: 3
     name: GEM packaging
   dependents: []
 
+  finish_date: &id001 2008-10-26 18:18:14.966252 -04:00
   id: 2
   name: Command Line interface
-- *id002
+  start_date: *id001
+- *id003
 - !ruby/object:Claret::Task 
   contributes_to: []
 
@@ -28,28 +30,30 @@ items:
 
   id: 4
   name: don't hardcode the skill categories
-- &id005 !ruby/object:Claret::Task 
+- &id007 !ruby/object:Claret::Task 
   contributes_to: 
-  - &id003 !ruby/object:Claret::Milestone 
+  - &id005 !ruby/object:Claret::Milestone 
     dependents: 
-    - *id005
-    - &id006 !ruby/object:Claret::Task 
+    - *id007
+    - &id008 !ruby/object:Claret::Task 
       contributes_to: 
-      - *id003
+      - *id005
       dependents: []
 
+      finish_date: &id004 2008-10-26 18:18:01.303956 -04:00
       id: 8
       name: Use ERB for RTF
+      start_date: *id004
     estimated_achieve_date: 
     id: 9
     name: Using ERB instead of custom code for formatting
   dependents: []
 
-  finish_date: &id004 2008-10-26 14:59:14.255221 -04:00
+  finish_date: &id006 2008-10-26 14:59:14.255221 -04:00
   id: 7
   name: Use ERB for Markdown
-  start_date: *id004
-- *id006
-- *id003
+  start_date: *id006
+- *id008
+- *id005
 name: Dave's Resume
 next_id: 10
