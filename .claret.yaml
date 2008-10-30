@@ -5,24 +5,26 @@ items:
 
   dependents: []
 
+  finish_date: &id001 2008-10-30 14:57:45.234011 -04:00
   id: 1
   name: Better conditional generation for headline and summary
-- &id002 !ruby/object:Claret::Task 
+  start_date: *id001
+- &id003 !ruby/object:Claret::Task 
   contributes_to: 
-  - &id003 !ruby/object:Claret::Task 
+  - &id004 !ruby/object:Claret::Task 
     contributes_to: []
 
     dependents: 
-    - *id002
+    - *id003
     id: 3
     name: GEM packaging
   dependents: []
 
-  finish_date: &id001 2008-10-26 18:18:14.966252 -04:00
+  finish_date: &id002 2008-10-26 18:18:14.966252 -04:00
   id: 2
   name: Command Line interface
-  start_date: *id001
-- *id003
+  start_date: *id002
+- *id004
 - !ruby/object:Claret::Task 
   contributes_to: []
 
@@ -30,37 +32,46 @@ items:
 
   id: 4
   name: don't hardcode the skill categories
-- &id007 !ruby/object:Claret::Task 
+- &id008 !ruby/object:Claret::Task 
   contributes_to: 
-  - &id005 !ruby/object:Claret::Milestone 
+  - &id006 !ruby/object:Claret::Milestone 
     dependents: 
-    - *id007
-    - &id008 !ruby/object:Claret::Task 
+    - *id008
+    - &id009 !ruby/object:Claret::Task 
       contributes_to: 
-      - *id005
+      - *id006
       dependents: []
 
-      finish_date: &id004 2008-10-26 18:18:01.303956 -04:00
+      finish_date: &id005 2008-10-26 18:18:01.303956 -04:00
       id: 8
       name: Use ERB for RTF
-      start_date: *id004
+      start_date: *id005
     estimated_achieve_date: 
     id: 9
     name: Using ERB instead of custom code for formatting
   dependents: []
 
-  finish_date: &id006 2008-10-26 14:59:14.255221 -04:00
+  finish_date: &id007 2008-10-26 14:59:14.255221 -04:00
   id: 7
   name: Use ERB for Markdown
-  start_date: *id006
-- *id008
-- *id005
+  start_date: *id007
+- *id009
+- *id006
 - !ruby/object:Claret::Task 
   contributes_to: []
 
   dependents: []
 
+  finish_date: &id010 2008-10-30 14:57:46.543414 -04:00
   id: 10
   name: Restore the achievement filtering stuff
+  start_date: *id010
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 11
+  name: document how to filter achievements better
 name: Dave's Resume
-next_id: 11
+next_id: 12
