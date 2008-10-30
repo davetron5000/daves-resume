@@ -82,5 +82,12 @@ items:
 
   id: 13
   name: make scaffolding more fine grained
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 14
+  name: Allow for user-generated templates
 name: Dave's Resume
-next_id: 14
+next_id: 15

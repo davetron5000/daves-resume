@@ -51,7 +51,7 @@ class Resume
         resume = Resume.new
         resume.core = ResumeCore.scaffold
         resume.experience << Job.scaffold
-        resume.experience << Job.scaffold
+        resume.experience << Job.scaffold("Penetrode")
         resume.skills = SkillSet.scaffold
         resume.education << Education.scaffold
         resume.education << Education.scaffold("Rhode Island School of Design")
@@ -298,9 +298,9 @@ class Job
         @positions = Array.new
     end
 
-    def Job.scaffold
+    def Job.scaffold(name="Initech")
         job = Job.new
-        job.name = "Initech"
+        job.name = name
         job.date_range = DateRange.scaffold(2000,2003)
         job.location = "San Francisco, CA"
         job.positions << Position.scaffold("Lead Copy Boy",2001)
@@ -341,7 +341,7 @@ class Position
         position.achievements << "Enter your most important achievements first"
         position.achievements << "Follow with additional ones, making sure to indicate the result of your actions"
         position.achievements[0].tags = Array.new
-        position.achievements[0].tags << :important
+        position.achievements[0].tags << :major
         position.achievements[0].tags << :architect
         position.achievements[1].tags = Array.new
         position.achievements[1].tags << :architect

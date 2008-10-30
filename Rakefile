@@ -4,8 +4,12 @@ require 'rubygems'
 require 'rake/gempackagetask'
 
 Rake::RDocTask.new do |rd|
+    rd.title = "Dave's Resume Builder and Formatter"
     rd.rdoc_files.include("lib/**/*.rb")
+    rd.rdoc_files.include("lib/**/*.rdoc")
     rd.rdoc_files.include("ext/**/*.rb")
+    rd.rdoc_files.include("bin/**/*")
+    rd.main = "lib/README.rdoc"
 end
 
 spec = eval(File.read('daves-resume.gemspec'))
