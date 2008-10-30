@@ -378,4 +378,22 @@ class DateRange
         end
     end
 end
+
+# Configuration for generating a resume
+class ResumeConfig
+    # Primary achievement tag to make sure gets included
+    attr_accessor :primary_tag
+    # Alternate achievement tag to make sure gets included if the primary tag isn't used
+    attr_accessor :alt_tag
+    # List of tags to include
+    attr_accessor :achievement_tags
+    # Minimum number of achievements per position
+    attr_accessor :min_achievements
+    # Maximum number of achievements per position
+    attr_accessor :max_achievements
+    # If false, untagged achievements are ignore
+    attr_accessor :include_untagged_achievements
+    attr_accessor :core_name
+end
+
 end

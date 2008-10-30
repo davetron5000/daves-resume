@@ -1,6 +1,8 @@
 require 'yaml'
 require 'resume'
 require 'fileutils'
+require 'position_filter'
+
 include FileUtils
 module Resume
 # Serializes a resume to/from YAML
@@ -41,6 +43,8 @@ class Serializer
             resume.core = cores[0]
         end
         raise "#{core_to_use} didn't match any resumes" if !resume.core
+        config_filename = "#{dir}/config_#{core_to_use}.yaml"
+        config = File.open(config_filename) { |yf| YAML::load( yf ) } if File.exists?(config_filename)
         resume.skills = File.open( "#{dir}/#{skills_prefix}.yaml" ) { |yf| YAML::load( yf ) } if File.exists?("#{dir}/#{skills_prefix}.yaml")
         resume.experience = read(dir,experience_prefix)
         resume.education = read(dir,education_prefix)
@@ -49,7 +53,17 @@ class Serializer
         resume.experience.sort!.reverse!
         resume.education.sort!.reverse!
         resume.samples.sort!.reverse!
-        resume.experience.each() { |xp| xp.positions.sort!.reverse! }
+        resume.experience.each() do |xp|
+            xp.positions.each() do |position|
+                if position.respond_to? :filter_achievements!
+                    if config && position.respond_to?(:filter_config=)
+                        position.filter_config=config
+                    end
+                    position.filter_achievements! 
+                end
+            end
+            xp.positions.sort!.reverse!
+        end
         return resume
     end
 

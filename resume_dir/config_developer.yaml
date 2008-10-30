@@ -1,0 +1,11 @@
+--- !ruby/object:Resume::ResumeConfig 
+achievement_tags: 
+- :lead
+- :pm
+- :developer
+alt_tag: :architect
+core_name: developer
+include_untagged_achievements: true
+max_achievements: 3
+min_achievements: 3
+primary_tag: :developer

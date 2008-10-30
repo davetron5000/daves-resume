@@ -1,8 +1,9 @@
-#!/usr/bin/ruby -I lib -I ext
+#!/usr/bin/ruby -I lib -I ext -I conf
 
 require 'resume'
 require 'serializer'
 require 'formatter'
+require 'conf'
 
 include Resume
 
