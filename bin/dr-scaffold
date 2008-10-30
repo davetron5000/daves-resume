@@ -1,0 +1,48 @@
+#!/usr/bin/ruby -I lib -I ext -I conf
+
+require 'rubygems'
+require 'commandline'
+require 'resume'
+require 'serializer'
+require 'formatter'
+require 'fileutils'
+require 'conf'
+
+include Resume
+
+class DavesResume < CommandLine::Application
+    def initialize
+        author "David Copeland"
+        synopsis "Usage: #{$0} [--force] --resume resume_dir"
+        short_description "Generates scaffold of a resume for Dave's Resume"
+        long_description "This will generate a series of YAML files that you can use as the basis for your resume.  You can create as many experience and education files as you like; these will all be picked up and sorted appropriately.  See the README for more"
+
+        options :help
+
+        option :flag, :names => %w(--force -f),
+            :opt_description => "Force overwrite of existing scaffold dirs"
+
+        option :names => %w(--resume -r), 
+            :opt_description => "Sets the path to put the resume YAML files",
+            :arity => [1,1],
+            :opt_found   => get_args,
+            :opt_not_found => lambda {
+                puts synopsis
+                exit 
+            }
+    end
+
+    def main
+        resume = Resume::Resume.scaffold
+        serializer = Serializer.new
+        scaffold_dir = opt.resume
+        if (opt.force || (!File.exist? scaffold_dir))
+            rm_rf(scaffold_dir)
+            mkdir(scaffold_dir)
+            serializer.store(scaffold_dir,resume)
+            puts "Your scaffold resume is in #{scaffold_dir}"
+        else
+            puts "#{scaffold_dir} exists, use --force to overwrite"
+        end
+    end
+end

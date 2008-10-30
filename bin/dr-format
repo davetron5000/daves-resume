@@ -1,0 +1,58 @@
+#!/usr/bin/ruby -I lib -I ext -I conf
+
+require 'rubygems'
+require 'commandline'
+require 'resume'
+require 'serializer'
+require 'formatter'
+require 'fileutils'
+require 'conf'
+
+include Resume
+
+class DavesResume < CommandLine::Application
+    def initialize
+        author "David Copeland"
+        synopsis "Usage: #{$0} --format file_format [file_format]* --resume resume_yaml_dir [--config config_name] [--name base_name]"
+        short_description "Resume builder and formatter"
+        long_description "This reads your resume in YAML and outputs it in a given file format (e.g. RTF).  This also allows you to specify multiple resume configurations and to choose between them.  For example, if you are searching for a senior developer and a technical lead position, you might want to change your headline and summary, depending on the position. Further, you may want to customize which achievements of your post positions you focus on."
+
+        options :help
+        option :names => %w(--format -f), 
+            :opt_description => "[format] Formats to generate for your resume",
+            :arg_description => "One or more format names matching existing templates",
+            :arity => [1,-1],
+            :opt_found   => get_args,
+            :opt_not_found => lambda {
+                puts synopsis
+                exit 
+            }
+        option :names => %w(--resume -r), 
+            :opt_description => "[format, scaffold] Sets the path to the resume YAML files",
+            :arity => [1,1],
+            :opt_found   => get_args,
+            :opt_not_found => lambda {
+                puts synopsis
+                exit 
+            }
+        option :names => %w(--config -c), 
+            :opt_description => "[format] Sets the configuration (filters, headline, etc) for this generation",
+            :arg_description => "Name of the config to use",
+            :arity => [1,1],
+            :opt_found   => get_args,
+            :opt_not_found => false
+        option :names => %w(--name -n), 
+            :opt_description => "[format] Controls the name of the generated file",
+            :arg_description => "Base name of the file(s) to generate (extension is based on formats selected)",
+            :arity => [1,1],
+            :opt_found   => get_args,
+            :opt_not_found => 'resume'
+    end
+
+    def main
+        serializer = Serializer.new
+        serializer.core_to_use = opt.config if opt.config
+        formatter = Formatter.new(serializer.load(opt.resume),opt.name)
+        formatter.send(opt.format.to_sym)
+    end
+end

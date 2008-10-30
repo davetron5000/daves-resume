@@ -1,0 +1,13 @@
+#!/usr/bin/ruby -I lib -I ext -I conf
+
+COMMAND = ARGV.shift
+
+cli = "dr-#{COMMAND}"
+
+if (!system(cli,*ARGV))
+    cli = "bin/" + cli
+    if (!system(cli,*ARGV))
+        puts "Couldn't find #{cli}"
+        exit -1
+    end
+end

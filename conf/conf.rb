@@ -22,5 +22,5 @@ developer_config.include_untagged_achievements = true
 developer_config.min_achievements = 3
 developer_config.max_achievements = 3
 developer_config.core_name = 'developer'
-File.open("dev.yaml",'w') { |out| YAML::dump(developer_config,out) }
-File.open("techlead.yaml",'w') { |out| YAML::dump(tech_lead_config,out) }
+#File.open("dev.yaml",'w') { |out| YAML::dump(developer_config,out) }
+#File.open("techlead.yaml",'w') { |out| YAML::dump(tech_lead_config,out) }
