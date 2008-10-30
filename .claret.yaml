@@ -9,22 +9,24 @@ items:
   id: 1
   name: Better conditional generation for headline and summary
   start_date: *id001
-- &id003 !ruby/object:Claret::Task 
+- &id004 !ruby/object:Claret::Task 
   contributes_to: 
-  - &id004 !ruby/object:Claret::Task 
+  - &id005 !ruby/object:Claret::Task 
     contributes_to: []
 
     dependents: 
-    - *id003
+    - *id004
+    finish_date: &id002 2008-10-30 19:39:19.139879 -04:00
     id: 3
     name: GEM packaging
+    start_date: *id002
   dependents: []
 
-  finish_date: &id002 2008-10-26 18:18:14.966252 -04:00
+  finish_date: &id003 2008-10-26 18:18:14.966252 -04:00
   id: 2
   name: Command Line interface
-  start_date: *id002
-- *id004
+  start_date: *id003
+- *id005
 - !ruby/object:Claret::Task 
   contributes_to: []
 
@@ -32,49 +34,49 @@ items:
 
   id: 4
   name: don't hardcode the skill categories
-- &id008 !ruby/object:Claret::Task 
+- &id009 !ruby/object:Claret::Task 
   contributes_to: 
-  - &id006 !ruby/object:Claret::Milestone 
+  - &id007 !ruby/object:Claret::Milestone 
     dependents: 
-    - *id008
-    - &id009 !ruby/object:Claret::Task 
+    - *id009
+    - &id010 !ruby/object:Claret::Task 
       contributes_to: 
-      - *id006
+      - *id007
       dependents: []
 
-      finish_date: &id005 2008-10-26 18:18:01.303956 -04:00
+      finish_date: &id006 2008-10-26 18:18:01.303956 -04:00
       id: 8
       name: Use ERB for RTF
-      start_date: *id005
+      start_date: *id006
     estimated_achieve_date: 
     id: 9
     name: Using ERB instead of custom code for formatting
   dependents: []
 
-  finish_date: &id007 2008-10-26 14:59:14.255221 -04:00
+  finish_date: &id008 2008-10-26 14:59:14.255221 -04:00
   id: 7
   name: Use ERB for Markdown
-  start_date: *id007
-- *id009
-- *id006
+  start_date: *id008
+- *id010
+- *id007
 - !ruby/object:Claret::Task 
   contributes_to: []
 
   dependents: []
 
-  finish_date: &id010 2008-10-30 14:57:46.543414 -04:00
+  finish_date: &id011 2008-10-30 14:57:46.543414 -04:00
   id: 10
   name: Restore the achievement filtering stuff
-  start_date: *id010
+  start_date: *id011
 - !ruby/object:Claret::Task 
   contributes_to: []
 
   dependents: []
 
-  finish_date: &id011 2008-10-30 16:16:32.977824 -04:00
+  finish_date: &id012 2008-10-30 16:16:32.977824 -04:00
   id: 11
   name: document how to filter achievements better
-  start_date: *id011
+  start_date: *id012
 - !ruby/object:Claret::Task 
   contributes_to: []
 
