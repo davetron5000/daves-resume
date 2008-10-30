@@ -9,6 +9,7 @@ require 'resume'
 require 'serializer'
 require 'formatter'
 require 'fileutils'
+require 'make_commandline_gemproof'
 
 include Resume
 
