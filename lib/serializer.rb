@@ -1,7 +1,6 @@
 require 'yaml'
 require 'resume'
 require 'fileutils'
-require 'position_filter'
 
 include FileUtils
 module Resume
@@ -15,6 +14,7 @@ class Serializer
     attr_accessor :core_prefix
     attr_accessor :skills_prefix
     attr_accessor :core_to_use
+    attr_accessor :filter_file
 
     def initialize
         @experience_prefix='experience'
@@ -55,11 +55,12 @@ class Serializer
         resume.samples.sort!.reverse!
         resume.experience.each() do |xp|
             xp.positions.each() do |position|
-                if position.respond_to? :filter_achievements!
-                    if config && position.respond_to?(:filter_config=)
-                        position.filter_config=config
+                if (filter_file)
+                    require filter_file
+                    if (FILTER.respond_to? :filter_config=)
+                        FILTER.filter_config=config
                     end
-                    position.filter_achievements! 
+                    position.achievements = FILTER.filter_achievements(position.achievements)
                 end
             end
             xp.positions.sort!.reverse!

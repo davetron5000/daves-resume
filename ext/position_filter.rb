@@ -1,8 +1,8 @@
-class Resume::Position
+class KeyAcheivementsFilter
 
     attr_accessor :filter_config
 
-    def filter_achievements!
+    def filter_achievements(achievements)
         counts = Hash.new
         developer_not_architect = Array.new
         filtered = achievements.select() do |a|
@@ -33,6 +33,8 @@ class Resume::Position
                 end
             end
         end
-        @achievements = filtered
+        filtered
     end
 end
+
+FILTER = KeyAcheivementsFilter.new
