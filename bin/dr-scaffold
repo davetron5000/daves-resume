@@ -6,7 +6,6 @@ require 'resume'
 require 'serializer'
 require 'formatter'
 require 'fileutils'
-require 'conf'
 
 include Resume
 

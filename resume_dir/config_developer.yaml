@@ -6,6 +6,6 @@ achievement_tags:
 alt_tag: :architect
 core_name: developer
 include_untagged_achievements: true
-max_achievements: 3
+max_achievements: 5
 min_achievements: 3
 primary_tag: :developer

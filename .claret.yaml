@@ -71,7 +71,9 @@ items:
 
   dependents: []
 
+  finish_date: &id011 2008-10-30 16:16:32.977824 -04:00
   id: 11
   name: document how to filter achievements better
+  start_date: *id011
 name: Dave's Resume
 next_id: 12
