@@ -17,7 +17,7 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin, Oracle
++ *Some experience with*: Oracle, OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin
 
 ## Experience
 
@@ -48,7 +48,6 @@ Key Achievements:
         
 + Established development procedures and best-practices; new team members were able to contribute working code within days of starting
 + Conducted code, design and UI reviews of Swing/EJB/Hibernate enterprise system; ensured consistent quality in support of user satisfaction and maintainability
-+ Provided estimates and project planning, working with USMS stakeholders to present a realistic, achievable development plan
 + Designed and implemented key use-cases for USMS prisoner tracking system
     
 #### Technical Architect
@@ -60,10 +59,8 @@ Key Achievements:
         
 + Consolidated and completed analysis of MARAD's enterprise systems, databases and technology; provided the CIO a clear and usable overview of all technical assets and deployments
 + Performed analysis of existing legacy databases, looking for common elements and usage patterns; supported providing a unified data architecture to reduce maintenance costs and ensure consistent data analysis
-+ Took ownership of system development process and delivered working process and document templates within a month of starting
 + Developed system development guide for CIO; ensures consistent deployments and maintainable solutions, regardless of service-provider
 + Mentored developers in J2EE best-practices
-+ Performed technical evaluation of issue-tracking tools; recommended a low-cost, high-utility solution for the project team
     
 #### Technical Lead/Architect
 _9/2005 - 10/2006_
@@ -73,10 +70,7 @@ _Description:_ Create technical architecture and system design for unified data-
 Key Achievements:
         
 + Designed technical architecture for unifying and modernizing two key systems and databases for USMS using a J2EE distributed architecture based on EJB, Hibernate, and Swing; provided a long-term viable and highly usable platform for business process integration
-+ Designed and implemented above-mentioned system using rapid development techniques to gather user feedback on usability and workflow.
 + Created user interface style guide and supporting Swing framework; allowed developers to easily create consistent user interfaces regardless of IDE
-+ Conducted requirements gathering using cross-functional domain experts to understand and refine prisoner booking procedures; system would be the first to completely support all booking policies across the organization
-+ Produced required SDLC documents for requirements, system design, and system maintenance
     
 #### Senior Software Engineer
 _4/2002 - 9/2005_
@@ -85,13 +79,9 @@ _Description:_ Design and develop Java code for government systems.  Participate
 
 Key Achievements:
         
-+ Successfully completed migration of legacy system to modern, distributed system based on J2EE and Swing;  modernized system provided usability and workflow enhancements over legacy system
 + Established architecture, design and initial working version of Visa management system for Department of State using Java, J2EE, Swing, Oracle and Weblogic
-+ Successfully migrated technical infrastructure from Weblogic to JBoss; Standards-compliance and open-source software saved USMS significant cost in both licensing and maintenance
-+ Designed and implemented a self-directed training tool and context-sensitive help system using JavaHelp;  Allow trainers to easily author and maintain content while users could train on live version of application
 + Conducted usability tests with cross-functional users group and revised system based on user feedback;  significantly contributed to the success of the application which gave the team confidence that the product would be highly usable
 + Standardized development tools and practices by creating a project intranet, Ant-based deployment scripts and a common build environment; allowed new developers to be up and running very quickly and ensured accurate knowledge transfer between staff
-+ Created prototype of mobile interface to USMS criminal search system by reusing EJB-based business logic; standards-compliance and distributed design allowed for very fast prototyping, reducing costs
     
 
 ### Publicis Dialog (f/k/a Novo/Ironlight)(San Francisco, CA) _2/1998 - 2/2002_
@@ -155,9 +145,9 @@ _Description:_ Perform design and coding for client work and internal tools usin
 Key Achievements:
         
 + Successfully migrated configuration management system from RCS to CVS
++ Refactored and maintained a low-level image manipulation library in C
 + Designed and created a build system for compiling and packaging company's core products on several versions of UNIX, MS-Windows, and OS/2; reduced the cost of maintenance and deployment of company's core products
 + Contributed to Department of Education financial aid form processing system to send and receive data between company's product and DOE mainframe
-+ Refactored and maintained a low-level image manipulation library in C
     
 
 
@@ -173,6 +163,7 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 
 ## Samples
 
+* [Toy Connection Pool](http://github.com/davetron5000/connectionpool/tree/master)
 * [RestUnit (in progress)](http://github.com/davetron5000/restunit/tree/master)
 * [Adventure (C++)](http://naildrivin5.com/adventure/)
 

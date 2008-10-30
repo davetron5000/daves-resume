@@ -1,40 +1,31 @@
-$: << "lib"
-$: << "ext"
-$: << "conf"
-
 require 'rake/clean'
 require 'rake/rdoctask'
-require 'resume'
-require 'formatter'
-require 'serializer'
-require 'conf'
-require 'erb'
-
-include Resume
 
 Rake::RDocTask.new do |rd|
     rd.rdoc_files.include("lib/**/*.rb")
     rd.rdoc_files.include("ext/**/*.rb")
 end
 
-serializer = Serializer.new
-serializer.core_to_use=CORE_TO_USE
-formatter = nil
 
-task :read_resume do |t|
-    formatter = Formatter.new(serializer.load(RESUME_YAML),RESUME_BASE)
+task :rtf do |t|
+    if (system("bin/dr-format -f RTF -r resume_dir -c techlead -n resume --filter position_filter"))
+        cp("resume.rtf","Resume_Of_David_Copeland_TechLead.doc")
+    else
+        warn "Couldn't run dr-format"
+    end
+    if (system("bin/dr-format -f RTF -r resume_dir -c developer -n resume --filter position_filter"))
+        cp("resume.rtf","Resume_Of_David_Copeland_Developer.doc")
+    else
+        warn "Couldn't run dr-format"
+    end
 end
 
-task :rtf => :read_resume do |t|
-    formatter.RTF("Resume_of_David_Copeland.doc")
+task :markdown do |t|
+    if (system("bin/dr-format -f Markdown -r resume_dir -c techlead -n resume --filter position_filter"))
+        cp("resume.markdown","README.markdown")
+    else
+        warn "Couldn't run dr-format"
+    end
 end
 
-task :web => :read_resume do |t|
-    formatter.HTML
-end
-
-task :markdown => :read_resume do |t|
-    formatter.Markdown("README.markdown")
-end
-
-task :default => [:rtf, :web, :markdown]
+task :default => [:rtf, :markdown]
