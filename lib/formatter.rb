@@ -13,12 +13,13 @@ module Resume
     # This will try to find +/home/davec/templates/doc.erb+ and use it to create your resume.  The
     # resulting file would be +MyResume.doc+ and that file would be copied to +DavesResume.doc+
     class Formatter
+        TEMPLATES_DEFAULT = File.expand_path(File.dirname(__FILE__) + '/../templates') 
         # Create a new Formatter for a given resume
         #
         # +resume+:: The Resume object to format
         # +resume_name+:: The basename of the files that will be output
         # +templates_dir+:: location of your templates
-        def initialize(resume,resume_name="resume",templates_dir="templates")
+        def initialize(resume,resume_name="resume",templates_dir=TEMPLATES_DEFAULT)
             @resume = resume
             @resume_name = resume_name
             @templates_dir = templates_dir

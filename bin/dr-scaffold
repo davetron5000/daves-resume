@@ -1,4 +1,7 @@
-#!/usr/bin/ruby -I lib -I ext -I conf
+#!/usr/bin/ruby
+
+$: << File.expand_path(File.dirname(__FILE__) + '/../lib') 
+$: << File.expand_path(File.dirname(__FILE__) + '/../ext') 
 
 require 'rubygems'
 require 'commandline'

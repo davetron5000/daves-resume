@@ -1,4 +1,4 @@
-#!/usr/bin/ruby -I lib -I ext -I conf
+#!/usr/bin/ruby
 
 COMMAND = ARGV.shift
 

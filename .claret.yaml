@@ -75,5 +75,12 @@ items:
   id: 11
   name: document how to filter achievements better
   start_date: *id011
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 12
+  name: Find a better cli parser that doesn't break rubygems
 name: Dave's Resume
-next_id: 12
+next_id: 13

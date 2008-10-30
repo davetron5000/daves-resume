@@ -1,11 +1,17 @@
 require 'rake/clean'
 require 'rake/rdoctask'
+require 'rubygems'
+require 'rake/gempackagetask'
 
 Rake::RDocTask.new do |rd|
     rd.rdoc_files.include("lib/**/*.rb")
     rd.rdoc_files.include("ext/**/*.rb")
 end
 
+spec = eval(File.read('daves-resume.gemspec'))
+Rake::GemPackageTask.new(spec) do |pkg|
+    pkg.need_tar = true
+end
 
 task :rtf do |t|
     if (system("bin/dr-format -f RTF -r resume_dir -c techlead -n resume --filter position_filter"))
