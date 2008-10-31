@@ -1,5 +1,4 @@
 spec = Gem::Specification.new do |s| 
-  require 'rake'
   s.name = 'daves-resume'
   s.version = '0.1.1'
   s.author = 'David Copeland'
@@ -7,7 +6,18 @@ spec = Gem::Specification.new do |s|
   s.homepage = 'http://www.naildrivin5.com'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Command Line tools to manage your resume and generate it in various formats'
-  s.files = FileList["{bin,lib,ext,templates}/**/*"].to_a
+  s.files = [
+    'ext/make_commandline_gemproof.rb',
+    'ext/position_filter.rb',
+    'ext/string_tags.rb',
+    'github-test.rb',
+    'lib/formatter.rb',
+    'lib/resume.rb',
+    'lib/serializer.rb',
+    'templates/HTML.erb',
+    'templates/Markdown.erb',
+    'templates/RTF.erb',
+  ]
   s.require_paths << 'ext'
   s.require_paths << 'lib'
   s.bindir = 'bin'
