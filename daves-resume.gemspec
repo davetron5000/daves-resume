@@ -10,7 +10,6 @@ spec = Gem::Specification.new do |s|
     'ext/make_commandline_gemproof.rb',
     'ext/position_filter.rb',
     'ext/string_tags.rb',
-    'github-test.rb',
     'lib/formatter.rb',
     'lib/resume.rb',
     'lib/serializer.rb',
