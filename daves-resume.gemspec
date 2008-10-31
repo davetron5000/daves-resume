@@ -1,6 +1,7 @@
 spec = Gem::Specification.new do |s| 
+  require 'rake'
   s.name = 'daves-resume'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.author = 'David Copeland'
   s.email = 'davidcopeland@naildrivin5.com'
   s.homepage = 'http://www.naildrivin5.com'
