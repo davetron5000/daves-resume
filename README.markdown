@@ -17,7 +17,7 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: Oracle, OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, WebObjects, Weblogic, ERWin
++ *Some experience with*: OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, Rails, script.aculo.us, Prototype, WebObjects, Weblogic, ERWin, Oracle
 
 ## Experience
 

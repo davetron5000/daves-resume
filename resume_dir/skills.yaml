@@ -81,6 +81,18 @@ skills:
     years_experience: 1
   :apis: 
   - !ruby/object:Skill 
+    experience_level: :novice
+    name: Prototype
+    years_experience: 1
+  - !ruby/object:Skill 
+    experience_level: :novice
+    name: script.aculo.us
+    years_experience: 1
+  - !ruby/object:Skill 
+    experience_level: :novice
+    name: Rails
+    years_experience: 1
+  - !ruby/object:Skill 
     experience_level: :expert
     name: J2EE/JavaEE
     years_experience: 8
