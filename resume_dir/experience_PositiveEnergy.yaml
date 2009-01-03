@@ -1,0 +1,31 @@
+--- !ruby/object:Job 
+date_range: &id010 !ruby/object:DateRange 
+  start_date: 2008-04-01
+location: Arlington, VA
+name: Positive Energy
+positions: 
+- !ruby/object:Position 
+  achievements: 
+  - !str
+    str: Implemented key features of core reporting technology, increasing revenue and client base
+    "@tags":
+    - :spring
+    - :maven
+    - :junit
+    - :sql
+    - :hibernate
+    - :java
+    - :developer
+  - !str
+    str: Expanded unit and integration testing suites for more complete code coverage
+    "@tags":
+    - :testing
+    - :java
+    - :junit
+    - :easymock
+    - :spring
+    - :maven
+    - :developer
+  date_range: *id010
+  description: Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of Positive Energy's business and a key factor in retaining new clients.
+  title: Senior Java Software Engineer

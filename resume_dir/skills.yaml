@@ -23,6 +23,10 @@ skills:
     name: Ant
     years_experience: 6
   - !ruby/object:Skill 
+    experience_level: :novice
+    name: Maven
+    years_experience: 1
+  - !ruby/object:Skill 
     experience_level: :intermediate
     name: Tomcat
     years_experience: 1
@@ -33,7 +37,7 @@ skills:
   - !ruby/object:Skill 
     experience_level: :intermediate
     name: Git
-    years_experience: 1
+    years_experience: 2
   - !ruby/object:Skill 
     experience_level: :intermediate
     name: CVS

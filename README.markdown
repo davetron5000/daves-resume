@@ -14,13 +14,26 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 
 + **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, Ruby, PHP
 + **APIs**: J2EE/JavaEE, Servlets, JDBC, EJB (v2 and 3), Swing, Java Persistence, Hibernate, JavaHelp, JSP, JUnit, TestNG, HTTP/REST, JMS, JAXB
-+ **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Tomcat, Git, MEGA
++ **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Git, Tomcat, MEGA
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, Rails, script.aculo.us, Prototype, WebObjects, Weblogic, ERWin, Oracle
++ *Some experience with*: OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, Rails, script.aculo.us, Prototype, WebObjects, Weblogic, ERWin, Maven, Oracle
 
 ## Experience
 
+
+### Positive Energy(Arlington, VA) 
+    
+#### Senior Java Software Engineer
+_4/2008 - present_
+
+_Description:_ Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of Positive Energy's business and a key factor in retaining new clients.
+
+Key Achievements:
+        
++ Implemented key features of core reporting technology, increasing revenue and client base
++ Expanded unit and integration testing suites for more complete code coverage
+    
 
 ### Gliffy.com(San Francisco, CA (telecommute)) 
     
