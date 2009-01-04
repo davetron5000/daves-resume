@@ -25,7 +25,7 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 ### Positive Energy(Arlington, VA) 
     
 #### Senior Java Software Engineer
-_4/2008 - present_
+_12/2008 - present_
 
 _Description:_ Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of Positive Energy's business and a key factor in retaining new clients.
 
