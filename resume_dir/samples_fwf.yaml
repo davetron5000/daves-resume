@@ -1,0 +1,3 @@
+--- !ruby/object:Resume::Sample 
+name: Fun Web Framework (experiment in Java web framework design)
+url: http://github.com/davetron5000/fwf/tree/master

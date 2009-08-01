@@ -178,6 +178,8 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 ## Samples
 
 * [Toy Connection Pool](http://github.com/davetron5000/connectionpool/tree/master)
-* [RestUnit (in progress)](http://github.com/davetron5000/restunit/tree/master)
-* [Adventure (C++)](http://naildrivin5.com/adventure/)
+* [Moocow (Ruby Client library for Remember The Milk)](http://github.com/davetron5000/moocow/tree)
+* [Gliffy Ruby Client Library](http://github.com/davetron5000/gliffy/tree/master)
+* [GLI (Ruby command line DSL)](http://github.com/davetron5000/gli/tree/master)
+* [Fun Web Framework (experiment in Java web framework design)](http://github.com/davetron5000/fwf/tree/master)
 
