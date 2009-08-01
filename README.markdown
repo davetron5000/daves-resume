@@ -8,30 +8,31 @@
 **A results-oriented technical leader with proven success designing, developing, and deploying enterprise software systems**
 ## Summary
 
-Proven abilities as a developer, leader, and mentor.  Produces high-quality deliverables through pragmatic, results-driven best practices.  Deep technical expertise with enterprise Java, object-oriented design, and software development processes.  History of improving the quality of every project, team, and deliverable by balancing business, user, and technical needs.  Has led successful teams as an architect, technical lead, and department manager.
+Proven abilities as a developer, leader, and mentor.  Produces high-quality deliverables through pragmatic, results-driven best practices.  Deep technical expertise with enterprise development, object-oriented design, and software development processes.  History of improving the quality of every project, team, and deliverable by balancing business, user, and technical needs.  Has led successful teams as an architect, technical lead, and department manager.
 ## Skills
 
 
 + **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, Ruby, PHP
-+ **APIs**: J2EE/JavaEE, Servlets, JDBC, EJB (v2 and 3), Swing, Java Persistence, Hibernate, JavaHelp, JSP, JUnit, TestNG, HTTP/REST, JMS, JAXB
-+ **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Apache, Git, Tomcat, MEGA
++ **APIs**: Servlets, J2EE/JavaEE, JDBC, Swing, EJB (v2 and 3), Java Persistence, Hibernate, JavaHelp, JSP, Spring, JAXB, HTTP/REST, TestNG, JUnit, JMS, HAML/SASS, Rails
++ **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Git, Apache, Maven, MEGA, Tomcat
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: OpenID, Ajax, SOA, FLEX, Struts, Spring, Seam, Rails, script.aculo.us, Prototype, WebObjects, Weblogic, ERWin, Maven, Oracle
++ *Some experience with*: WebObjects, Weblogic, ERWin, Oracle, Scala, Ajax, SOA, Struts, Cucumber, Sinatra, script.aculo.us, Prototype, JQuery
 
 ## Experience
 
 
-### Positive Energy(Arlington, VA) 
+### O-Power (formerly Positive Energy)(Arlington, VA) 
     
 #### Senior Java Software Engineer
 _12/2008 - present_
 
-_Description:_ Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of Positive Energy's business and a key factor in retaining new clients.
+_Description:_ Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of O-Power's business and a key factor in acquiring new clients and growing the business.
 
 Key Achievements:
         
 + Implemented key features of core reporting technology, increasing revenue and client base
++ Designed and implemented new core service for daily, hourly, sub-hourly electric meter read reporting
 + Expanded unit and integration testing suites for more complete code coverage
     
 
