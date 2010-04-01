@@ -23,7 +23,7 @@ skills:
     name: Ant
     years_experience: 6
   - !ruby/object:Skill 
-    experience_level: :novice
+    experience_level: :intermediate
     name: Maven
     years_experience: 1
   - !ruby/object:Skill 
@@ -86,6 +86,10 @@ skills:
   :apis: 
   - !ruby/object:Skill 
     experience_level: :novice
+    name: JQuery
+    years_experience: 1
+  - !ruby/object:Skill 
+    experience_level: :novice
     name: Prototype
     years_experience: 1
   - !ruby/object:Skill 
@@ -93,8 +97,16 @@ skills:
     name: script.aculo.us
     years_experience: 1
   - !ruby/object:Skill 
-    experience_level: :novice
+    experience_level: :intermediate
     name: Rails
+    years_experience: 1
+  - !ruby/object:Skill 
+    experience_level: :novice
+    name: Sinatra
+    years_experience: 1
+  - !ruby/object:Skill 
+    experience_level: :intermediate
+    name: HAML/SASS
     years_experience: 1
   - !ruby/object:Skill 
     experience_level: :expert
@@ -137,6 +149,10 @@ skills:
     name: TestNG
     years_experience: 1
   - !ruby/object:Skill 
+    experience_level: :novice
+    name: Cucumber
+    years_experience: 1
+  - !ruby/object:Skill 
     experience_level: :intermediate
     name: JUnit
     years_experience: 1
@@ -153,11 +169,7 @@ skills:
     name: JavaHelp
     years_experience: 2
   - !ruby/object:Skill 
-    experience_level: :novice
-    name: Seam
-    years_experience: 1
-  - !ruby/object:Skill 
-    experience_level: :novice
+    experience_level: :intermediate
     name: Spring
     years_experience: 1
   - !ruby/object:Skill 
@@ -166,19 +178,11 @@ skills:
     years_experience: 1
   - !ruby/object:Skill 
     experience_level: :novice
-    name: FLEX
-    years_experience: 1
-  - !ruby/object:Skill 
-    experience_level: :novice
     name: SOA
     years_experience: 1
   - !ruby/object:Skill 
     experience_level: :novice
     name: Ajax
-    years_experience: 1
-  - !ruby/object:Skill 
-    experience_level: :novice
-    name: OpenID
     years_experience: 1
   :languages: 
   - !ruby/object:Skill 
@@ -201,6 +205,10 @@ skills:
     experience_level: :intermediate
     name: Perl
     years_experience: 14
+  - !ruby/object:Skill 
+    experience_level: :novice
+    name: Scala
+    years_experience: 1
   - !ruby/object:Skill 
     experience_level: :intermediate
     name: PHP

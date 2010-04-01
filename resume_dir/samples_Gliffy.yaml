@@ -1,0 +1,3 @@
+--- !ruby/object:Resume::Sample 
+name: Gliffy Ruby Client Library
+url: http://github.com/davetron5000/gliffy/tree/master

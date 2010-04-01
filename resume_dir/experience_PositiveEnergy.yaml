@@ -2,7 +2,7 @@
 date_range: &id010 !ruby/object:DateRange 
   start_date: 2008-12-01
 location: Arlington, VA
-name: Positive Energy
+name: O-Power (formerly Positive Energy)
 positions: 
 - !ruby/object:Position 
   achievements: 
@@ -17,6 +17,16 @@ positions:
     - :java
     - :developer
   - !str
+    str: Designed and implemented new core service for daily, hourly, sub-hourly electric meter read reporting
+    "@tags":
+    - :testing
+    - :java
+    - :junit
+    - :easymock
+    - :spring
+    - :maven
+    - :developer
+  - !str
     str: Expanded unit and integration testing suites for more complete code coverage
     "@tags":
     - :testing
@@ -27,5 +37,5 @@ positions:
     - :maven
     - :developer
   date_range: *id010
-  description: Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of Positive Energy's business and a key factor in retaining new clients.
+  description: Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of O-Power's business and a key factor in acquiring new clients and growing the business.
   title: Senior Java Software Engineer
