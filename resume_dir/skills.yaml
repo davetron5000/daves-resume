@@ -221,3 +221,7 @@ skills:
     experience_level: :intermediate
     name: C++
     years_experience: 3
+  - !ruby/object:Skill 
+    experience_level: :intermediate
+    name: OAuth
+    years_experience: 1
