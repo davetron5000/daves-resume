@@ -1,0 +1,70 @@
+--- !ruby/object:Job 
+date_range: &id010 !ruby/object:DateRange 
+  start_date: 2008-12-01
+location: Arlington, VA
+name: O-Power (formerly Positive Energy)
+positions: 
+- !ruby/object:Position 
+  achievements: 
+  - !str
+    str: Design and develop web application, including core architecture, test suites, documentation and development conventions
+    "@tags":
+    - :spring
+    - :maven
+    - :junit
+    - :ruby
+    - :hibernate
+    - :agile
+    - :TDD
+    - :developer
+    - :architecture
+    - :lead
+  - !str
+    str: Created department coding and development conventions; new engineers were up to full productivity within 2 weeks because of it.
+    "@tags":
+    - :agile
+    - :CI
+    - :lead
+    - :architecture
+    - :checkstyle
+    - :maven
+  - !str
+    str: Through the introduction of Scala, created web-based testing DSL to allow quick and easy coverage of web product's features
+    "@tags":
+    - :scala
+    - :TDD
+    - :testing
+    - :lead
+  - !str
+    str: Implemented key features of core reporting technology, increasing revenue and client base
+    "@tags":
+    - :spring
+    - :maven
+    - :junit
+    - :sql
+    - :hibernate
+    - :java
+    - :developer
+  - !str
+    str: Designed and implemented new core service for daily, hourly, sub-hourly electric meter read reporting
+    "@tags":
+    - :testing
+    - :java
+    - :junit
+    - :easymock
+    - :spring
+    - :maven
+    - :developer
+  - !str
+    str: Expanded unit and integration testing suites for more complete code coverage
+    "@tags":
+    - :testing
+    - :java
+    - :junit
+    - :easymock
+    - :spring
+    - :maven
+    - :developer
+  date_range: *id010
+  description: Lead development, design of flagship web product, directing team of 7+ developers through an Agile process.  Develop key features of web product as well as enhancements and maintenance of core reporting product.  Both reporting product generate majority of OPOWER's revenue supporting large growth of the company and contributing to gigawatts of energy reduction throughout the U.S.
+  title: Engineering Lead

@@ -206,7 +206,7 @@ skills:
     name: Perl
     years_experience: 14
   - !ruby/object:Skill 
-    experience_level: :novice
+    experience_level: :intermediate
     name: Scala
     years_experience: 1
   - !ruby/object:Skill 

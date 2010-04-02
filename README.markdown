@@ -12,25 +12,28 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 ## Skills
 
 
-+ **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, Ruby, PHP
++ **Languages**: Java, SQL, C, Perl, HTML, CSS, C++, XML, PHP, Ruby, OAuth
 + **APIs**: Servlets, J2EE/JavaEE, JDBC, Swing, EJB (v2 and 3), Java Persistence, Hibernate, JavaHelp, JSP, Spring, JAXB, HTTP/REST, TestNG, JUnit, JMS, HAML/SASS, Rails
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Git, Apache, Maven, MEGA, Tomcat
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: WebObjects, Weblogic, ERWin, Oracle, Scala, Ajax, SOA, Struts, Cucumber, Sinatra, script.aculo.us, Prototype, JQuery
++ *Some experience with*: Scala, Ajax, SOA, Struts, Cucumber, Sinatra, script.aculo.us, Prototype, JQuery, WebObjects, Weblogic, ERWin, Oracle
 
 ## Experience
 
 
 ### O-Power (formerly Positive Energy)(Arlington, VA) 
     
-#### Senior Java Software Engineer
+#### Engineering Lead
 _12/2008 - present_
 
-_Description:_ Enhance and maintain Java and SQL-based reporting engine used to create direct mailings for client's customers.  This is the core of O-Power's business and a key factor in acquiring new clients and growing the business.
+_Description:_ Lead development, design of flagship web product, directing team of 7+ developers through an Agile process.  Develop key features of web product as well as enhancements and maintenance of core reporting product.  Both reporting product generate majority of OPOWER's revenue supporting large growth of the company and contributing to gigawatts of energy reduction throughout the U.S.
 
 Key Achievements:
         
++ Design and develop web application, include core architecture, test suites, documentation and development conventions
++ Created department coding and development conventions; new engineers were up to full productivity within 2 weeks because of it.
++ Through the introduction of Scala, created web-based testing DSL to allow quick and easy coverage of web product's features
 + Implemented key features of core reporting technology, increasing revenue and client base
 + Designed and implemented new core service for daily, hourly, sub-hourly electric meter read reporting
 + Expanded unit and integration testing suites for more complete code coverage
@@ -178,8 +181,10 @@ Thesis: 'A Methodology for Software Verification and Validation Process Improvem
 ## Samples
 
 * [Toy Connection Pool](http://github.com/davetron5000/connectionpool/tree/master)
+* [Shorty - Scala-based URL shortener](http://github.com/davetron5000/shorty)
 * [Moocow (Ruby Client library for Remember The Milk)](http://github.com/davetron5000/moocow/tree)
 * [Gliffy Ruby Client Library](http://github.com/davetron5000/gliffy/tree/master)
 * [GLI (Ruby command line DSL)](http://github.com/davetron5000/gli/tree/master)
 * [Fun Web Framework (experiment in Java web framework design)](http://github.com/davetron5000/fwf/tree/master)
+* [Another Tour of Scala](http://www.naildrivin5.com/scalatour)
 
