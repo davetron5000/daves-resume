@@ -2,12 +2,12 @@
 date_range: &id010 !ruby/object:DateRange 
   start_date: 2008-12-01
 location: Arlington, VA
-name: O-Power (formerly Positive Energy)
+name: OPOWER (formerly Positive Energy)
 positions: 
 - !ruby/object:Position 
   achievements: 
   - !str
-    str: Design and develop web application, including core architecture, test suites, documentation and development conventions
+    str: Design and develop primary product (a web application), including core architecture, test suites, documentation and development conventions
     "@tags":
     - :spring
     - :maven
@@ -36,6 +36,14 @@ positions:
     - :testing
     - :lead
   - !str
+    str: Introduced Cucumber to QA team to provided automated acceptance tests that drove development; defect counts dropped dramatically within 6 weeks of deployment
+    "@tags":
+    - :ruby
+    - :cucumber
+    - :TDD
+    - :testing
+    - :lead
+  - !str
     str: Implemented key features of core reporting technology, increasing revenue and client base
     "@tags":
     - :spring
@@ -47,16 +55,6 @@ positions:
     - :developer
   - !str
     str: Designed and implemented new core service for daily, hourly, sub-hourly electric meter read reporting
-    "@tags":
-    - :testing
-    - :java
-    - :junit
-    - :easymock
-    - :spring
-    - :maven
-    - :developer
-  - !str
-    str: Expanded unit and integration testing suites for more complete code coverage
     "@tags":
     - :testing
     - :java
