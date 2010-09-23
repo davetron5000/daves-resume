@@ -15,6 +15,10 @@ skills:
     years_experience: 6
   :tools: 
   - !ruby/object:Skill 
+    experience_level: :novice
+    name: sbt
+    years_experience: 1
+  - !ruby/object:Skill 
     experience_level: :expert
     name: JBoss
     years_experience: 3
@@ -74,7 +78,7 @@ skills:
   - !ruby/object:Skill 
     experience_level: :intermediate
     name: MySQL
-    years_experience: 2
+    years_experience: 3 
   - !ruby/object:Skill 
     experience_level: :intermediate
     name: Informix
@@ -84,6 +88,10 @@ skills:
     name: Oracle
     years_experience: 1
   :apis: 
+  - !ruby/object:Skill 
+    experience_level: :intermediate
+    name: ScalaTest
+    years_experience: 1
   - !ruby/object:Skill 
     experience_level: :novice
     name: JQuery
@@ -101,12 +109,16 @@ skills:
     name: Rails
     years_experience: 1
   - !ruby/object:Skill 
-    experience_level: :novice
+    experience_level: :intermediate
     name: Sinatra
     years_experience: 1
   - !ruby/object:Skill 
     experience_level: :intermediate
     name: HAML/SASS
+    years_experience: 1
+  - !ruby/object:Skill 
+    experience_level: :novice
+    name: Compass
     years_experience: 1
   - !ruby/object:Skill 
     experience_level: :expert
@@ -149,7 +161,7 @@ skills:
     name: TestNG
     years_experience: 1
   - !ruby/object:Skill 
-    experience_level: :novice
+    experience_level: :intermediate
     name: Cucumber
     years_experience: 1
   - !ruby/object:Skill 

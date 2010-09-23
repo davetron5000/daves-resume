@@ -13,11 +13,11 @@ Proven abilities as a developer, leader, and mentor.  Produces high-quality deli
 
 
 + **Languages**: Java, SQL, C, Perl, HTML, C++, XML, CSS, PHP, Scala, Ruby, OAuth
-+ **APIs**: Servlets, J2EE/JavaEE, JDBC, Swing, EJB (v2 and 3), Java Persistence, Hibernate, JavaHelp, JSP, Spring, JAXB, HTTP/REST, TestNG, JUnit, JMS, HAML/SASS, Rails
++ **APIs**: Servlets, J2EE/JavaEE, JDBC, Swing, EJB (v2 and 3), Java Persistence, Hibernate, JavaHelp, JSP, Spring, JAXB, HTTP/REST, TestNG, Cucumber, JUnit, JMS, HAML/SASS, Sinatra, Rails, ScalaTest
 + **Tools**: vim, JBoss, CVS, Ant, make, Subversion, Git, Apache, Maven, MEGA, Tomcat
 + **Databases**: Informix, MySQL
 + **OSes**: UNIX/Linux, OS X, Windows
-+ *Some experience with*: Ajax, SOA, Struts, Cucumber, Sinatra, script.aculo.us, Prototype, JQuery, WebObjects, Weblogic, ERWin, Oracle
++ *Some experience with*: WebObjects, Weblogic, ERWin, sbt, Oracle, Ajax, SOA, Struts, Compass, script.aculo.us, Prototype, JQuery
 
 ## Experience
 
